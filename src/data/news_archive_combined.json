@@ -9,6 +9,16 @@
             "url": "/en/blog"
         }
     },
+    "mn": {
+        "headline": {
+            "title": "Мэдээний Архив",
+            "text": "Энд та COVID Tracing Mongolia нээлттэй эхийн төсөл болон энэ төслийн анхдагч Corona-Warn-App нээлттэй эхийн төслүүдийн талаар өнгөрсөн мэдээллүүддийг авч болно."
+        },
+        "backToBlogButton": {
+            "title": "Блогруу Буцах",
+            "url": "/mn/blog"
+        }
+    },
     "de": {
         "headline": {
             "title": "News Archiv",

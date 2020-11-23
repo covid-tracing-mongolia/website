@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="{{#unless lang_de}}en{{/unless}}{{#if lang_de}}de{{/if}}">
+<html class="no-js" lang="mn">
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="{{#if page-description}}{{page-description}}{{/if}}" />
@@ -23,12 +23,7 @@
     <div class="main-content">
       {{> body}}
     </div>
-    {{#unless lang_de}}
-    {{> footer language=global.lang.en}}
-    {{/unless}}
-    {{#if lang_de}}
-    {{> footer language=global.lang.de}}
-    {{/if}}
+    {{> footer language=global.lang.mn}}
     <script src="{{root}}assets/js/app.js"></script>
   </body>
 </html>

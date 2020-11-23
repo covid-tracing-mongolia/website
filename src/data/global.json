@@ -9,6 +9,10 @@
             "text": "Who helps regarding Corona-Warn-App questions?",
             "link": "/en/faq/#who_can_help"
         },
+        "mn": {
+            "text": "COVID Tracing Mongolia системийн талаарх асуултад хэн хариулах вэ?",
+            "link": "/mn/faq/#who_can_help"
+        },
         "de": {
             "text": "Wer hilft bei Corona-Warn-App Fragen?",
             "link": "/de/faq/#who_can_help"
@@ -159,6 +163,106 @@
                 "title": "© 2020 - The authors of the Corona-Warn-App open-source project",
                 "url": "https://github.com/corona-warn-app/cwa-website/graphs/contributors",
                 "external": true
+            }
+        },
+        "mn": {
+            "lang": {
+                "en": {
+                    "long": "English",
+                    "short": "EN"
+                },
+                "mn": {
+                    "long": "Mongolian",
+                    "short": "MN"
+                },
+                "de": {
+                    "long": "German",
+                    "short": "DE"
+                }
+            },
+            "nav": [
+                {
+                    "id": "community",
+                    "title": "Нийгэм",
+                    "url": "/mn/community/"
+                },
+                {
+                    "id": "blog",
+                    "title": "Блог",
+                    "url": "/mn/blog/"
+                },
+                {
+                    "id": "faq",
+                    "title": "Түгээмэл А/Х",
+                    "url": "/mn/faq/"
+                },
+                {
+                    "id": "github",
+                    "icon": "github",
+                    "title": "GitHub дээрх нээлттэй эхийн төсөл",
+                    "url": "https://github.com/covid-tracing-mongolia/website",
+                    "external": true
+                }
+            ],
+            "logo": {
+                "title": "COVID Tracing Mongolia - Open Source Project"
+            },
+            "footer-nav": [
+                {
+                    "title": "Систем Тус Бүрээр",
+                    "links": [
+                        {
+                            "title": "Гар утасны апп",
+                            "url": "https://github.com/covid-tracing-mongolia/mobile",
+                            "external": true
+                        },
+                        {
+                            "title": "Портал вэб апп",
+                            "url": "https://github.com/covid-tracing-mongolia/portal-web-app",
+                            "external": true
+                        },
+                        {
+                            "title": "Үндсэн систем",
+                            "url": "https://github.com/covid-tracing-mongolia/backend-server",
+                            "external": true
+                        },
+                        {
+                            "title": "Танилцуулга вэб",
+                            "url": "https://github.com/covid-tracing-mongolia/website",
+                            "external": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Таны Оролцоо",
+                    "links": [
+                        {
+                            "id": "github",
+                            "icon": "github",
+                            "icon-url": "/assets/img/icons/github_white.svg",
+                            "title": "GitHub дээрх нээлттэй эхийн төсөл",
+                            "url": "https://github.com/covid-tracing-mongolia/website",
+                            "external": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Холбоо барих",
+                    "links": [
+                        {
+                            "title": "+976 8888-1021",
+                            "url": "tel:+97688881021"
+                        },
+                        {
+                            "title": "amarbayar.amarsanaa@gmail.com",
+                            "url": "mailto:amarbayar.amarsanaa@gmail.com"
+                        }
+                    ],
+                    "testid": "hotline-app"
+                }
+            ],
+            "copyright": {
+                "title": "© 2020 - COVID Tracing Mongolia нээлттэй эхийн хөгжүүлэгчид"
             }
         },
         "de": {

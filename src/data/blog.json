@@ -18,6 +18,25 @@
       "external": false
     }
   },
+  "mn": {
+    "headline": {
+      "title": "Блог",
+      "text": "Эндээс та COVID Tracing Mongolia нээлттэй эхийн бүх төслийн талаар мэдээлэл авах боломжтой.  Нэмэлт мэдээлэл авах бол <a href='/mn/faq'>Түгээмэл Асуултууд</a> хэсгээс авч болно."
+    },
+    "baseSlug": "blog",
+    "dateFormat": "MMMM Do YYYY",
+    "readMore": "Дэлгэрэнгүй",
+    "backToIndexButton": {
+      "title": "Блогруу Буцах",
+      "url": "/mn/blog",
+      "external": false
+    },
+    "archiveButton": {
+      "title": "Мэдээний Архив Харах",
+      "url": "archive",
+      "external": false
+    }
+  },
   "de": {
     "headline": {
       "title": "Blog",

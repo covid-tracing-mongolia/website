@@ -4,7 +4,7 @@ const frontmatter = require('frontmatter');
 const marked = require('marked');
 const moment = require('moment');
 
-const languages = ['de', 'en'];
+const languages = ['de', 'en', 'mn'];
 const rootFolder = __dirname + '/../../';
 const dataFolder = path.resolve(rootFolder, 'src', 'data');
 const data = require(path.resolve(dataFolder, 'blog.json'));
@@ -75,7 +75,7 @@ const getBlogEntries = (lang) => {
     .reverse()
     .map(folderName => {
       // figure out which language file to use - default is 'en', others added with _{lang} to filename
-      const fn = lang === "en" ? 'index.md' : 'index_' + lang + '.md';
+      const fn = lang === "mn" ? 'index.md' : 'index_' + lang + '.md';
       const fileContent = (() => {
         try {
           return readFileSync(path.join(blogMdPath(), folderName, fn)).toString();
@@ -121,8 +121,9 @@ const writeBlogJson = (blogEntries, lang) => {
       "author": getAuthors(entry.author),
       "date": `on ${moment(entry.date).locale('en').format('MMM D')}`,
       "date_de": moment(entry.date).locale('de').format('DD.MM.YYYY'),
+      "date_mn": `${moment(entry.date).locale('mn').format('MMM D')}`,
       "source": {
-        "title": "Blog",
+        "title": "Блог",
         "external": false,
         "url": `blog/${entry.slug}`
       }

@@ -199,12 +199,13 @@ function images_webp() {
 function copyFAQs(done){
   copyFAQ("de");
   copyFAQ("en");
+  copyFAQ("mn");
   done();
 }
 
 function copyFAQ(lang) {
   return gulp
-    .src(`src/data/faq${(lang === "en" ? "" : ("_" + lang))}.json`)
+    .src(`src/data/faq${(lang === "mn" ? "" : ("_" + lang))}.json`)
     .pipe(jsonTransform(function (data, file) {
       let faq = {}
       data['section-main'].sections.forEach((section) => {
