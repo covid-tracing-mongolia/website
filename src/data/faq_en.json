@@ -1,0 +1,1070 @@
+{
+    "section-main": {
+        "headline": {
+            "title": "Frequently Asked Questions about the Corona-Warn-App"
+        },
+        "texts": {
+            "permalink": "Link to this answer",
+            "search": "Search",
+            "questions": "Questions",
+            "to_top": "To the top"
+        },
+        "sections": [
+            {
+                "title": "Support",
+                "id": "support",
+                "active": true,
+                "accordion": [
+                   {
+                        "title": "Who can help with questions regarding the Corona-Warn-App?",
+                        "anchor": "who_can_help",
+                        "active": true,
+                        "textblock": [
+                            "The technical hotline (telephone 0800 7540001) will help you with technical questions about the Corona-Warn-App, for instance if you have problems with risk identification. You can reach the hotline from Monday to Saturday from 7 a.m. to 10 p.m. (except on German public holidays), and it is free of charge for you within Germany.",
+                            "The TAN hotline (telephone 0800 7540002) will help you to enter the TAN if you have a positive test result and if you have not received a TAN or document with a QR code. The hotline is available 24 hours a day, seven days a week. The call is free of charge.",
+                            "If the test result is not available in the Corona-Warn-App, the relevant service personnel, test centre or health authority should be contacted to obtain the test result.  <br/>In order to make it easier for you to find the responsible health authority, the RKI has provided a corresponding tool. By entering the postal code or the city of residence, the responsible health authority (including contact details) is immediately displayed: <a href='https://tools.rki.de/PLZTool/en-GB'>Robert-Koch-Institut Tool: Health authority by postal code or place</a> <br/><a href='https://www.coronawarn.app/de/blog/2020-08-25-notes-qr-codes/'>Further information on the QR Code procedure</a>",
+                            "The websites of the Federal Government are offering general information and videos: <a href='https://www.bundesregierung.de/breg-de/themen/corona-warn-app'>https://www.bundesregierung.de/breg-de/themen/corona-warn-app</a>.",
+                            "The Robert Koch Institute also provides information on epidemiological aspects: <a href='https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV_node.html'>https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV_node.html</a>.",
+                            "As a media representative, please direct your enquiries to <a href='mailto:press@sap.com'>press@sap.com</a>.",
+                            "The various feedback channels of the <a href='https://www.coronawarn.app/de/community/'>Corona-Warn-App-Community<a/> will help you with your questions about the open source project of the Corona-Warn-App."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Common Issues",
+                "id": "most_asked",
+                "accordion": [
+                    {
+                        "title": "[Google/Android]: Battery optimization is not automatically disabled after activating the prioritized background activity",
+                        "anchor": "battery_optimization_background",
+                        "active": true,
+                        "textblock": [
+                             "When you switch on the prioritized background activity on some Android devices, the battery optimization for the Corona-Warn-App is not turned off on OS level. This is a known limitation for a limited number of Android devices. To turn off the battery optimization accordingly, restart your device."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Risk exposure can no longer be activated after updating to iOS 14",
+                        "anchor": "no_risk_update_ios14",
+                        "active": true,
+                        "textblock": [
+                             "After updating to iOS 14, some users report that risk exposure has been disabled and can no longer be turned on.",
+                             "This problem has already been reported to development and they are working on a solution. To be able to use the app to its full extent until the bug is fixed, please follow these steps:",
+                             "'Settings' > 'WiFi' > Switch 'WiFi' off.",
+                             "'Settings' > 'Exposure notifications' > 'Active region' (Corona-Warn-App) > 'Corona-Warn-App' > Switch 'Share exposure information' off and on again.",
+                             "'Settings' > 'WiFi' > Switch 'WiFi' on again.",
+                             "If the error still occurs although you have performed all steps, you have to reset and reinstall the application once. Your collected random ids will not be lost (<a href='#delete_random_ids'>see also here</a>). However, it will take 24 hours until the app resumes the data collected so."
+                        ]
+		    },
+                    {
+                        "title": "[Apple/iOS] Can’t enable exposure logging / Empty screen on iOS 13.7 / 14",
+                        "anchor": "ios_black_screen",
+                        "active": true,
+                        "textblock": [
+                            "There is a known issue under iOS 13.7 / 14 where in rare cases the Exposure Notifications can not be activated again after an update. The result is a black screen in the iOS settings.",
+                            "To fix the problem, proceed as follows:",
+                            "Settings > General > Reset > Reset Location and Privacy",
+                            "Afterwards the permissions in the Corona-Warn App have to be assigned again. You will be prompted to do so when the App is started."
+                        ]
+                    },
+                    {
+                        "title": "An encounter has been reported, but the risk status stays green",
+                        "anchor": "encounter_but_green",
+                        "active": true,
+                        "textblock": [
+                            "All active Corona-Warn-Apps regularly download the diagnosis keys released on the Corona-Warn-App server and pass them on to the operating system in batches through an interface. The app checks whether any of these received, recorded rolling proximity identifiers match any of the diagnosis keys. If there is a match, this means the following: The user’s smartphone encountered the smartphone of a person who has subsequently uploaded their diagnosis keys.",
+                            "In the next step, the app analyzes all the matching rolling proximity identifiers for each diagnosis key, to estimate how long the exposure lasted in total on the day in question and how close the smartphones were to each other on average during the exposure. The distance is calculated from the measured reduction in strength of the Bluetooth signal, which is specified in dB (decibel). All exposures for a diagnosis key that lasted less than 10 minutes in total (regardless of how close the smartphones came during that time) or during which the smartphones were more than 8 meters (73 dB attenuation) apart on average (regardless of how long the exposure lasted) are rated as harmless.",
+                            "The remaining encounters are rated collectively according to their distance and duration as well as the presumed infectiousness of the other person(s). This rating doesn't always yield an increased risk in which case those encounters - together with the harmless encounters from above - will be shown in the Corona-Warn-App but the risk status will stay the same.", 
+                            "For more details about risk assessment, including a sample calculation, see <a href='https://github.com/corona-warn-app/cwa-documentation/blob/master/cwa-risk-assessment.md' target='_blank' rel='noopener noreferrer'>https://github.com/corona-warn-app/cwa-documentation/blob/master/cwa-risk-assessment.md</a>."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: When activating exposure logging or Bluetooth I'm asked to activate my location. Do I have to do this?",
+                        "anchor": "android_location",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/> If you are using Android 11 and the Corona-Warn-App version 1.5 or above, you don't have to allow location access in order to use the Corona-Warn-App. This notification is not applicable for Android 11 phones and will be removed in one of the following updates of the Corona-Warn-App.<hr/>",
+                            "Corona-Warn-App does not track your location and does not have permission to do this. The reason for this message is an Android requirement: Bluetooth devices in close proximity to your device can only be detected if 'Use location' is activated on your phone (see <a href='https://support.google.com/android/answer/9888358?hl=en' target='_blank' rel='noopener noreferrer'>Use the COVID-19 Exposure Notifications System on your Android phone</a> and <a href='https://support.google.com/android/answer/9930236?hl=en' target='_blank' rel='noopener noreferrer'>About the Exposure Notifications System and Android location settings</a> in the Android help and <a href='https://developer.android.com/guide/topics/connectivity/bluetooth' target='_blank' rel='noopener noreferrer'>Bluetooth Overview</a> in the Android developer documentation). However, this doesn't mean that apps that use Bluetooth can automatically track your location.",
+                            "Since Corona-Warn-App must be able to detect devices in close proximity, you must activate the general system setting 'Use location'. However: The app will never record your location and will never use GPS. You can verify this yourself:",
+                            "<ol><li>Open 'Settings' on your phone (not the settings of the app).</li><li>Choose 'Security & Location' > 'Location' > 'App level permissions'.</li><li>You see a list of apps that can use your location if you give them permission. Corona-Warn-App is not listed here.</li></ol>",
+                            "Here you can allow or deny other apps to use your location, but since Corona-Warn-App doesn't need this permission, it doesn't even appear in the list.",
+                            "Again, as described above: You should not deactivate 'Use location' under 'Settings' > 'Security & Location' > 'Location', because this is a prerequisite for exchanging the encrypted random IDs."
+                        ]
+                    },
+                    {
+                        "title": "Problems when using the QR code",
+                        "anchor": "qr_test",
+                        "active": true,
+                        "textblock": [
+                            "I have received a QR code during a test, which I would like to use to retrieve the test result via the Corona-Warn-App. I get an error while scanning or the test result could not be retrieved for days. What can I do?",
+                            "In some cases you may have received a QR Code that is not compatible with the test retrieval system of the Corona-Warn-App or that has not been activated for retrieving the test. In order to avoid these problems, please check whether a) the laboratory with which the doctor or the test center works is connected to the Corona-Warn-App and b) the field 9 'Consent of the insured person to transmit the test result for the purpose of the Corona-Warn-App' has been ticked. Only then is it ensured that the procedure used works with the Corona-Warn-App.",
+                            "If you have scanned your QR code into the App after a corona test and do not receive a test result via the App within a few days, it is possible that the respective laboratory is not yet fully cooperating with the Corona-Warn-App. Currently, 70-80% of the existing test capacities in Germany are covered by the complete digital process. We are continuing to work with the laboratories to close the gaps and to connect and upgrade all laboratories for the process. Therefore it can happen that a laboratory gets the order for the test with the correct form, but has to transmit the test result to the tested person in another way. In this case, please call the responsible medical staff or test center/health authority to get your test result. If you are informed of a positive test result and would like to use the Corona-Warn-App to warn your risk encounters, call the hotline at +49 800 7540002 and participate in the TeleTan procedure.",
+                            "If you have already scanned the QR Code, it unfortunately cannot be scanned a second time, nor is it possible to delete a previously entered QR Code and scan it in again. We have to make sure that only one phone can scan the QR Code and transmit its diagnostic keys. For privacy reasons, we cannot store the phone's ID, so the QR Code is only valid for one scan.",
+                            "We are currently looking into how to improve the app's user interface to detect QR Codes that are not working and inform you about them. You can find more details about the errors <a href='https://github.com/corona-warn-app/cwa-documentation/issues/400' target='_blank' rel='noopener noreferrer'>on GitHub</a>."
+                        ]
+                    },
+                    {
+                        "title": "Will the device battery drain more quickly with the app running in the background?",
+                        "anchor": "battery",
+                        "active": true,
+                        "textblock": [
+                            "The Corona-Warn-App uses the latest Bluetooth technology: Thanks to the Exposure Notification API from Apple and Google, the app can use the energy-efficient BLE (Bluetooth Low Energy) technology.",
+                            "The battery consumption of the Corona-Warn-App is made up of two factors: the consumption of the app itself and the consumption due to the recording of the encounters via the Exposure Notification System. The latter can be optimized by using the currently available operating systems for iOS and Android.",
+                            "While interpreting your battery consumption, please note that the percentage refers to the full use of your phone in the last 24 hours. This means that a frequently and intensively used phone has a very low percentage of battery consumption per app. On the contrary, if you use your phone mainly to make phone calls and only occasionally stream music or use social media, the percentage per app will be relatively high.",
+                            "<b>Note for Android phones</b>: Bluetooth devices near your device can only be detected if 'Use location' is activated on your phone. For details, see <a href='#android_location' target='_blank' rel='noopener'>Android: When activating exposure logging or Bluetooth I'm asked to activate my location. Do I have to do this?</a>. This means that other apps on your device could also use your location, which might be the reason for higher power consumption. To avoid this, you should check which apps use your location. Go to your device settings and choose 'Security & Location' > 'Location' > 'App level permissions'. Here you can deny other apps permission to use your location if you don't think they need it. Since Corona-Warn-App doesn't need this permission, it doesn't appear in the list."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Background Updates",
+                "id": "background_updates",
+                "accordion": [
+                    {
+                        "title": "[Apple/iOS]: My risk status hasn't been updated for over a day. An internet connection was available, what's wrong?",
+                        "anchor": "no_risk_update_ios",
+                        "active": true,
+                        "textblock": [
+                            "First, please ensure that you are running the current version of iOS and the app. The latest version of the Corona Warn App is currently <b>[ios.current-app-version]</b>. If you are running a lower version, open the App Store to check if an update for Corona-Warn-App is available. Please install it and also restart your device to mitigate the problem. Open Corona-Warn-App once after the restart. You can find additional information <a href='https://www.linkedin.com/pulse/corona-warn-app-software-update-f%25C3%25BCr-ios-harald-lindlar/' target='_blank' rel='noopener noreferrer'>in a blog post on LinkedIn (German only)</a>.",
+                            "Make sure that exposure logging is active.",
+                            "If the latest version still shows the issue, please open the app regularly, at least once a day. We are working on additional updates to solve respective issues.",
+                            "In addition, please check the following device settings on your phone:",
+                            "<b>Background App Refresh (in General)</b>",
+                            "Corona-Warn-App must be able to refresh in the background both via Wi-Fi and cellular data, so you have to allow this in general. Open your device settings, choose 'General' > 'Background App Refresh' and activate 'Wi-Fi & Cellular Data'.",
+                            "This means that you allow background refreshing in general, but you can decide for each individual app if it really refreshes in the background (see next section).",
+                            "<i>Important: Mobile/cellular data that are transmitted during the usage of Corona-Warn-App is free of charge and will not be deducted from your data plan!</i>",
+                            "<b>Background App Refresh for Corona-Warn-App</b>",
+                            "Check if you have activated background app refresh for Corona-Warn-App as well. Open the device settings, go to 'Corona-Warn', and activate 'Background App Refresh' as well as 'Mobile Data'. As mentioned above: You’re not charged for any data that is transmitted via Corona-Warn-App."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Notes on the Low Power Mode on iOS devices",
+                        "anchor": "ios_power_save",
+                        "active": true,
+                        "textblock": [
+                            "If your device runs on iOS version 13.6.1 or later, the functionality of the Corona Warn App is not negatively affected by the Low Power Mode. On devices with an earlier iOS version, Low Power Mode may cause problems with updating the risk status in the background. <b>We therefore ask you to update the iOS version of your device to 13.6.1 or higher if you want to use the Low Power Mode.</b>"
+                         ]
+                    },
+                    {
+                        "title": "[Google/Android]: My risk status hasn't been updated for over a day. An internet connection was available, what's wrong?",
+                        "anchor": "no_risk_update",
+                        "active": true,
+                        "textblock": [
+                            "First, please ensure that you are running the current version of the app. You should have version [android.current-app-version] or higher. If you are running a lower version, open the Google Play Store to check if an update for Corona-Warn-App is available. Please install it and also restart your device to mitigate the problem.  Open Corona-Warn-App once after the restart. You can find additional information <a href='https://www.linkedin.com/pulse/corona-warn-app-software-update-f%25C3%25BCr-ios-harald-lindlar/' target='_blank' rel='noopener noreferrer'>in a blog post on LinkedIn (German only)</a>.",
+                            "Make sure that exposure logging is active.",
+                            "If the latest version still shows the issue, it is probably due to individual power saving modes or battery settings by different manufacturers. These do not fully comply with the Android specifications and often apply aggressive power saving measures. <b>Corona-Warn-App is affected by these power saving settings and therefore often cannot update the risk status in the background for a long time. However, you can change the settings in the Corona-Warn-App:</b>",
+                            "<ol><li>Open the app settings.</li><li>Choose 'Prioritized Background Activity'.</li><li>Activate the prioritized background activity and allow the suggested changes.</li></ol>",
+                            "Samsung offers an additional \"Ultra Power Saving Mode\" for their devices. This mode often prevents a successful update of the risk status in the background, even if 'Prioritized Background Activity' has been selected. <b>To ensure a proper functionality of the Corona-Warn-App, the Ultra Power Saving Mode should be deactivated.</b> Please refer to the <a href='#max_power_save' target='_blank' rel='noopener'>Notes on the Ultra Power Saving Mode on Samsung devices</a> for further instructions.",
+                            "In the power-saving settings of your phone, you can make sure that there's an exception set for the Corona-Warn-App:",
+                            "Unfortunately, in some phones, you might not be able to activate the prioritized background activity in the app settings. You can still activate the prioritized background activity: You do so directly in the energy saving settings. of your phone. Set an exception for the Corona-Warn-App. If this still doesn't update the risk status automatically in the background, please create a comment in <a href='https://github.com/corona-warn-app/cwa-app-android/issues/933' target='_blank' rel='noopener noreferrer'>GitHub issue 933</a>, giving your phone type and the installed versions of the app and of the COVID-19 exposure notifications.",
+                            "If the latest version still shows the issue, please open the app regularly, at least once a day. We are working on additional updates to solve respective issues.",
+                            "If all these recommendations did not help as expected, you can make further, smartphone-specific, settings. Software  manufacturers, such as Slack, which faced similar problems, have already provided a lot of information to help solve this problem. Please try the tips from the Slack documentation for the Corona-Warn-App and your smartphone: <a href='https://slack.com/intl/en-gb/help/articles/360001562747-Known-issues-with-Android-notifications' target='_blank' rel='noopener noreferrer'>Known issues with Android notifications</a>. If you have a <a href='#huawei_honor' target='_blank' rel='noopener'>Huawei or Honor phone, please also note these instructions</a>."
+                        ]
+	                },
+                    {
+                        "title": "[Google/Android]: Notes on the Ultra Power Saving Mode on Samsung devices",
+                        "anchor": "max_power_save",
+                        "active": true,
+                        "textblock": [
+                            "The usage of the Ultra Power Saving Mode on Samsung devices can cause the background updates of the risk status to fail, even if <a href='#no_risk_update' target='_blank' rel='noopener'>Prioritized Background Activity is activated</a>. This behaviour is likely triggered by the strongly reduced processing power in this mode, which results in an abort of the background updating process. The Ultra Power Saving Mode should therefore be deactivated in the settings:",
+                            "<ol><li>'Settings' -> 'System' -> 'Power saving'</li><li>Select 'Ultra Power Saving Mode'.</li><li>Open the menu in the upper right and select 'Turn off Ultra power saving mode'.</li></ol>"
+                         ]
+                    },
+                    {
+                        "title": "[Google/Android]: Notes on devices from Huawei or Honor",
+                        "anchor": "huawei_honor",
+                        "active": true,
+                        "textblock": [
+                            "For devices from Huawei or Honor, in addition to <a href='#no_risk_update' target='_blank' rel='noopener'>switching on the Prioritized Background Activity</a>, additional settings may be necessary to improve the reliability of the background update, and to prevent <a href='#app_crash' target='_blank' rel='noopener'>unexpected crashes of the Corona-Warn-App when starting</a> the app. This applies in particular to older devices with EMUI 4, but also to newer devices.",
+                            "According to current information, a system update seems to be available for newer Huawei devices that is explicitly intended to fix the problems with Corona-Warn-App.",
+                            "The GitHub community has compiled suggestions for making additional settings and has also linked information about the system update. You can find all the details in <a href='https://github.com/corona-warn-app/cwa-app-android/issues/1053#issuecomment-690615554' target='_blank' rel='noopener noreferrer'>this GitHub issue</a>."
+                         ]
+                    }
+                ]
+            },
+            {
+                "title": "Notifications",
+                "id": "notification",
+                "accordion": [
+                    {
+                        "title": "[Apple/iOS] 'ExposureDetectionIsAlreadyRunning' in CWA version 1.6.1",
+                        "anchor": "ExposureDetectionIsAlreadyRunning",
+                        "active": true,
+                        "textblock": [                            
+                            "The notification <a href='https://github.com/corona-warn-app/cwa-app-ios/issues/1497'>'ExposureDetectionIsAlreadyRunning'</a> <a href='https://github.com/corona-warn-app/cwa-app-ios/issues/1512#issuecomment-727206633'>can be ignored</a>. The CWA is still working correctly and this issue will be solved with a <a href='https://github.com/corona-warn-app/cwa-app-ios/pull/1510'>future release</a>."
+                        ]
+                    },
+                    {
+                        "title": "My exposure log shows multiple, simultaneous checks for exposures. Is that an error?",
+                        "anchor": "multiple_exposure_checks",
+                        "active": true,
+                        "textblock": [
+                            "When the app downloads the current diagnosis keys from the server, a check of the exposure log is performed. During that process, a separate check is performed for each of the last 14 days, for which diagnosis keys are available. It is therefore not an error that multiple, seemingly simultaneous entries are visible in the exposure check history. You can further click on the details of each check to see that different amounts of keys were provided for each of them."
+                        ]
+                    },
+                    {
+                        "title": "My exposure log shows checks for less than 14 days",
+                        "anchor": "exposure_check",
+                        "active": true,
+                        "textblock": [
+                            "Your phone settings display the exposure checks for the last 14 days: Apple: 'COVID-19 Exposure Logging', Android: 'Exposure checks'. When the app was running constantly during the last two weeks, you should see 14 checks within the last 24 hours.", "Please note: The log is just the history. The exposures of the last 14 days are checked and the risk status calculated each and every day. The important thing is that the exposure logging for within the last 24 hours is shown.","It might be that entries are displayed for less than 14 days, although exposure was checked correctly. There are several reasons:", "<ol><li>The log has a fixed limit of 100 entries on iOS devices. If there are more entries, only the latest are kept. We're in contact with Apple so that the complete log will be displayed. The log limit of 100 entries on Android devices has been recently removed by Google at the end of August 2020.</li><li>Sometimes, only 13 logs display for a day. The 14th entry was deleted only after risk calculation. This can happen when the time of downloading the keys from the server intersects with the time of deleting the keys that are older than 14 days from your phone. The same applies here: the exposure was checked properly. You'll find a detailed explanation and an example at <a href='https://github.com/corona-warn-app/cwa-app-ios/issues/921#issuecomment-664301639 ' target='_blank' rel='noopener noreferrer'>https://github.com/corona-warn-app/cwa-app-ios/issues/921#issuecomment-664301639</a>.</li><li>If you use the app only recently (let's say for 5 days), fewer checks for the last 24 hours are displayed (here: 5 checks), one for every day that the Corona-Warn-App was running constantly.</li></ol>"
+                        ]
+                    },
+                    {
+                        "title": "Message: „Something went wrong. Due to a technical problem your app has been reset“",
+                        "anchor": "cause9002_recovery",
+                        "active": true,
+                        "textblock": [
+                            "Starting with Corona-Warn-App version 1.5.0 or higher, it may happen that after opening the app you get the notification „Something went wrong. Due to a technical problem your app was reset“.",
+                            "<h4>What happened?</h4> An error occurred while accessing the database, which means that the encrypted data can no longer be accessed. The Corona-Warn-App has detected this error and automatically reset the databases, so that access is now working again and the Corona-Warn-App can still inform you about your risk status. More technical details about this problem can be found below.",
+                            "<h4>What should you consider?</h4> <b>Resetting the databases has no effect on the risk determination and therefore not on your risk status.</b> All recorded encounters with other people using the app will be preserved. You will still be notified about risk encounters and can warn others if you test positive for COVID-19.",
+                            "<b>However, if you have scanned a QR code for electronic notification of a COVID-19 test and the test result has not yet been sent to you in the App, resetting the databases will cause the test to lose its registration for electronic transmission. For data protection reasons, the QR code can unfortunately not be read in again. Please contact your physician or the laboratory to obtain your test result.</b>",
+                            "Resetting the data also means that the information on how long your app has been active is lost (the number of active days is set to 0). Entries may have also been removed from the history of encounter records, which you can access via your Google Account settings. (see <a href='#exposure_check' target='_blank' rel='noopener noreferrer'>here</a> and <a href='#keys_matches' target='_blank' rel='noopener noreferrer'>here</a>) However, this has no effect on the risk determination and your risk status. After 24 hours at the latest, your risk status should be displayed again and new entries should appear in the history of the encounter records.",
+                            "<h4>Technical background</h4> The Corona-Warn-App was developed with the highest standards of data protection. For this purpose, data is stored in encrypted form and the program code of the app is made available for public review (<a href='#open-source' target='_blank' rel='noopener noreferrer'>open source approach</a>). In order to realize data encryption for an app, developers like to fall back on program modules that have already been tried and tested in the past and are also made available as open source by other developers. This way, transparency for all components of the Corona-Warn-App can be guaranteed. Only recently it became known that an encryption module, which is also used by the Corona-Warn-App, works incorrectly if the memory for keys or passwords integrated in the Android operating system does not react reliably. This error leads to the fact that an encrypted database can no longer be opened. This in turn causes some users to see the message „<a href='#cause9002' target='_blank' rel='noopener noreferrer'>Cause: 9002 Something went wrong (sqlite)</a>“ or <a href='#app_crash' target='_blank' rel='noopener noreferrer'>the app can no longer be opened</a>. Of course, the Corona-Warn-App is thoroughly tested before each release of an update. However, this error never occurred during the tests and it is still difficult to reproduce.",
+                            "All parties involved work together to resolve the error as quickly as possible."
+                        ]
+                    },
+                    {
+                        "title": "Problems with other apps and devices that use Bluetooth",
+                        "anchor": "various_device_problems",
+                        "active": true,
+                        "textblock": [
+                           "Since I installed the app, my phone sometimes behaves oddly. Example: There are occasional problems with other apps and devices that use Bluetooth. What can I do?",
+                            "Some users report that their phones behave differently since they installed Corona-Warn-App. Example: Sometimes the communication between their phones and Bluetooth devices via other apps is interrupted. This affects, for example, smart watches or Bluetooth earphones. We’re investigating these problems, but this is likely a problem with the basic operating system functions, over which we have no control.",
+                            "Please try the following: <ul><li>Restart your phone.</li><li>Unpair the other Bluetooth-connected devices and recouple them.</li></ul>",
+                           "If the above does not help, contact your device manufacturer:", "<ul><li>Apple/iOS phones: <a href='https://support.apple.com' target='_blank' rel='noopener noreferrer'>Apple Support</a></li><li>Android phones: <a href='https://support.google.com/android/answer/3094742?hl=en&ref_topic=7313011' target='_blank' rel='noopener noreferrer'>Get help from your device’s manufacturer</a></li></ul>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Availability",
+                "id": "availability",
+                "accordion": [
+                    {
+                        "title": "What are the minimum operating system requirements for my phone?",
+                        "anchor": "minimum_requirements",
+                        "active": true,
+                        "textblock": [
+                            "Apple/iOS: Corona-Warn-App runs on the iPhone 6s or higher. The Exposure Notification API was introduced with iOS 13.5, so your operating system needs to be iOS [ios.minimum-required-os-version] or higher.",
+                            "Google/Android: Corona-Warn-App runs on phones with Android [android.minimum-required-os-version] or higher. Google Play services install the Exposure Notification API automatically.",
+                            "For other operating system-related questions, please contact Apple or Google."
+                        ]
+                    },
+                    {
+                        "title": "I am testing a beta version of iOS. Why is the Corona-Warn-App not yet supported?",
+                        "anchor": "beta_ios",
+                        "active": true,
+                        "textblock": [
+                            "We do not officially support beta versions of the respective operating systems. These are still in development and not intended for productive operation.",
+                            "However, if you as a participant in the Apple beta software programme would like to point out potential errors or incompatibilities at an early stage, <a href='https://github.com/corona-warn-app/cwa-app-ios/issues' target='_blank' rel='noopener noreferrer'>we are happy to receive your feedback on Github</a>."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Why is iOS [ios.minimum-required-os-version] a minimum requirement?",
+                        "anchor": "ios135",
+                        "active": true,
+                        "textblock": [
+                            "Apple introduced the required Exposure Notification API with iOS 13.5, see <a href='https://support.apple.com/en-us/HT210393#135' target='_blank' rel='noopener noreferrer'>About iOS 13 Updates</a>. With release 1.5 of the Corona Warn App, iOS 13.6 is now required, as the Exposure Notification API has again been adapted and improved. You can find the supported devices here: <a href='https://support.apple.com/guide/iphone/supported-iphone-models-iphe3fa5df43/ios' target='_blank' rel='noopener noreferrer'>Supported iPhone Models</a>. Unfortunately, Apple no longer supports devices that are older than 4-5 years. We as app developers, unfortunately, cannot influence this."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Can I also use the app on a rooted device?",
+                        "anchor": "rooted_devices",
+                        "active": true,
+                        "textblock": [
+                            "No, the app is not supported on rooted devices."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Why are Android [android.minimum-required-os-version] and Google Play Services minimum requirements?",
+                        "anchor": "googleplay",
+                        "active": true,
+                        "textblock": [
+                            "Google delivers the required Exposure Notification API for contact tracing apps with Google Play Services. The API is supported starting with Android API level 23. This version is available starting with Android version 6.0, see <a href='https://source.android.com/setup/start/build-numbers' target='_blank' rel='noopener noreferrer'>Codenames, Tags, and Build Numbers</a>. This was decided solely by Google. In addition, older devices sometimes don’t support Bluetooth Low Energy. We as app developers, unfortunately, cannot influence this."
+                        ]
+                    },
+                    {
+                        "title": "In which languages is the Corona-Warn-App available?",
+                        "anchor": "available_languages",
+                        "active": true,
+                        "textblock": [
+                            "The app is currently available in the following languages:<ul><li>German</li><li>English</li><li>Turkish (as of version 1.1.1)</li><li>Bulgarian (as of version 1.2.0)</li><li>Polish (as of version 1.2.0)</li><li>Romanian (as of version 1.2.0)</li></ul>",
+                            "The telephone hotline (<a href='tel:+498007540001'>+49 800 7540001</a>) answers in Turkish, English and German. More languages are to come. We'll keep you up to date.", "The language of the app is derived from the language that is configured in the smartphone's language settings. To display the app in German, for example, change the language settings to German.",
+                            "Please note that many countries release their own Corona tracking apps. Because the German Corona-Warn-App is also available in the app stores and play stores of these countries, the Corona tracking apps could be mixed up. Therefore, make sure that you download the app for your country."
+                        ]
+                    },
+                    {
+                        "title": "In which international app stores is the app available?",
+                        "anchor": "international",
+                        "active": true,
+                        "textblock": [
+                            "After a detailed examination of the situation it was determined that for legal reasons any publication of the Corona-Warn-App in App Stores outside of Germany is currently only possible after a case-by-case assessment. Legal consultations have shown that in the case of publication in international App Stores, the law of the respective country must be considered and applied to the Corona-Warn-App. This applies in particular to data protection, any necessary claims for information by local authorities and other contractual and consumer protection regulations.",
+                            "The Robert Koch Institute as publisher of the app will trigger this check for the respective countries and release the app after successful legal examination. The RKI currently released the app for the following European countries: <ul><li>Austria</li><li>Belgium</li><li>Bulgaria</li><li>Croatia</li><li>Cyprus</li><li>Czech Republic</li><li>Denmark</li><li>Finland</li><li>France</li><li>Germany</li><li>Greece</li><li>Hungary</li><li>Iceland</li><li>Ireland</li><li>Italy</li><li>Latvia</li><li>Lithuania</li><li>Luxembourg</li><li>Malta</li><li>Netherlands</li><li>Norway</li><li>Poland</li><li>Portugal</li><li>Romania</li><li>Sweden</li><li>Slovakia</li><li>Slovenia</li><li>Spain</li><li>Switzerland</li><li>United Kingdom</li></ul>",
+                            "More countries are currently being checked and will be released in the App Stores step by step. The Robert Koch Institute asks for your understanding that it cannot provide any information on specific countries and the status of their release during the ongoing review process.",
+                            "Please note that many countries release their own Corona tracking apps. Because the German Corona-Warn-App is also available in the app stores and play stores of these countries, the Corona tracking apps could be mixed up. Therefore, make sure that you download the app for your country."
+
+                        ]
+                    },
+                    {
+                        "title": "In which countries can the Corona Warn App be used?",
+                        "anchor": "interoperability_countries",
+                        "active": true,
+                        "textblock": [
+                            "Together with the European Commission, an infrastructure for secure information exchange has been developed, known as the \"Interoperability Gateway\". This gateway enables the Corona Warn App to operate across national borders and to receive potential warning messages abroad. Detailed information about the Gateway is available from the European Commission in <a href='https://ec.europa.eu/commission/presscorner/detail/en/qanda_20_1905#gateway'>Coronavirus: EU interoperability gateway for contact tracing and warning apps – Questions and Answers</a>.",
+                            "To view more information in the app, tap",
+                            "<ol><li>'EXPOSURE LOGGING ACTIVE/STOPPED'</li><li>Then tap 'Transnational Exposure Logging'.</li><li>Scroll down to the list of countries.</li></ol>",
+                            "Below is a list of currently participating countries and details of the responsible health authorities:",
+                            "(Status: 16.11.2020)",
+                            "<table class='table'><thead><tr><th>Country</th><th>Data Controller</th><th>Contact Details</th></tr></thead><tbody><tr><td>Croatia<br/>(from 16.11.2020)</td><td>AZOP Croatian Personal Data Protection Agency</td><td>AZOP Croatian Personal Data Protection Agency<br>Selska cesta 136<br>10000 Zagreb<br>Croatia<br>E-Mail: azop@azop.hr<br>Phone: + 385 14609000</td></tr><tr><td>Czech Republic<br/>(pending)</td><td>Ministry of Health</td><td>Ministry of Health<br>Palackého náměstí 4<br>120 00 Praha 2<br>Czech Republic<br>E-Mail: mzcr@mzcr.cz<br>Phone: +420 224971111</td></tr><tr><td>Denmark<br>(from 6.11.2020)</td><td>Styrelsen for Patientsikkerhed (Danish Patient Safety Authority)</td><td>Styrelsen for Patientsikkerhed<br>Islands Brygge 67<br>2300 København S<br>Denmark<br>E-Mail: stps@stps.dk<br>Phone: +45 72286600</td></tr><tr><td>Germany<br>(from 17.10.2020)</td><td>Robert-Koch-Institut</td><td>Robert-Koch-Institut<br>Nordufer 20<br>13353 Berlin<br>Germany<br>E-Mail: CoronaWarnApp@rki.de<br>Phone: +49 30187540</td></tr><tr><td>Ireland<br>(from 19.10.2020)</td><td>Health Service Executive</td><td>Dr Steevens’ Hospital<br>Steevens Lane<br>Dublin 8<br>Irland<br>E-Mail: cio@hse.ie<br>Phone: +353 87 688 3565</td></tr><tr><td>Italy<br>(from 19.10.2020)</td><td>Ministry of Health</td><td>Ministry of Health<br>Viale Giorgio Ribotta 5<br>00144 Rome<br>Italy<br>E-Mail: segretariato.generale@sanita.it<br>Phone: +39 65994694546</td></tr><tr><td>Latvia<br>(from 6.11.2020)</td><td>Slimību profilakses un kontroles centrs</td><td>Slimību profilakses un kontroles centrs (SPKC)<br>Duntes iela 22, k-5<br>Rīga, LV 1005<br>Latvia<br>E-Mail: pasts@spkc.gov.lv<br> Phone: +371 675015 90 or -91</td></tr><tr><td>Spain<br>(from 6.11.2020)</td><td>Ministerio de Asuntos Economicos y Transformacion Digital</td><td>Ministerio de Asuntos Economicos y Transformacion Digital<br>P. de la Castellana, 162<br>28071 Madrid<br> Spain <br>E-Mail: soporte.radarcovid@economia.gob.es<br> Phone: +34 91 258 28 52</td></tr></tbody></table>"
+                        ]
+                    },
+                    {
+                        "title": "Why are there different age restrictions to use the app on Android and Apple devices?",
+                        "anchor": "age_restriction",
+                        "active": true,
+                        "textblock": [
+                            "The app is aimed at people who are at least 16 years old. Of course, custodians are free to allow children and young people under the age of 16 to use the app.",
+                            "However, the age restrictions applicable in the Apple App Store and the Google Play Store are determined exclusively by the respective companies on the basis of various criteria. Therefore, the age limit in the Apple App Store is '12+' and in the PlayStore is '0+'."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: The app isn’t available as an APK, neither on GitHub nor on F-Droid etc. Will you also deliver the app as an APK?",
+                        "anchor": "apk",
+                        "active": true,
+                        "textblock": [
+                            "Delivery via alternative distribution channels (download via APK, F-Droid etc.) is not planned for various reasons.",
+                            "On the one hand, the Robert Koch Institute, which is legally and content-wise responsible for its distribution, is responsible for the delivery of the app. At the moment, the focus is only on delivery via the respective App Stores. Furthermore, the app only works with Google Play Services. With a distribution via the Play Store it can be assumed that Google Play Services are installed. We cannot make these assumptions for other distribution channels at the moment.",
+                            "The distribution of the existing app on other channels is currently published as a request on <a href='https://github.com/corona-warn-app/cwa-wishlist/issues/57' target='_blank' rel='noopener noreferrer'>corona-warn-app/cwa-wishlist#57</a>. The discussion about alternative distribution platforms such as F-Droid can be found at <a href='https://github.com/corona-warn-app/cwa-documentation/issues/5' target='_blank' rel='noopener noreferrer'>corona-warn-app/cwa-documentation#5</a>.",
+                            "Furthermore, there is an initiative in the developer community to make the Corona-Warn-App executable independently of Google Play Services via appropriate extensions. Details can be found in the issue <a href='https://github.com/corona-warn-app/cwa-app-android/issues/75' target='_blank' rel='noopener noreferrer'>corona-warn-app/cwa-app-android#75</a>."
+                        ]
+                    },
+                    {
+                        "title": "Will the app also be available on tablets, smart watches, and other wearables?",
+                        "anchor": "smartwatch",
+                        "active": true,
+                        "textblock": [
+                            "We don’t plan to implement the app for tablets, smart watches, and other wearables. Our focus is on smart phones, for example because of the availability of the required APIs. If we change this approach, we will of course communicate this widely."
+                        ]
+                    },
+                    {
+                        "title": "Will the app be made available on platforms other than Apple App Store and Google Play Store?",
+                        "anchor": "other_platforms",
+                        "active": true,
+                        "textblock": [
+                            "It's not foreseeable at the moment if and when the app will be available in other app stores except Google or Apple. The app will use the Apple and Google Exposure Notification APIs. The community is invited to contribute and use the app for other APIs."
+                        ]
+                    },
+                    {
+                        "title": "Where can I get the app?",
+                        "anchor": "where_to_get",
+                        "active": true,
+                        "textblock": [
+                            "Since the app is available, you can download it from the Apple App Store or Google Play Store."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Use",
+                "id": "application",
+                "accordion": [
+                    {
+                        "title": "What to do with several QR codes?",
+                        "anchor": "QRcodes",
+                        "active": true,
+                        "textblock": [
+                            "At the moment, many families are tested at the airport after returning from their holidays. For each family member that is being tested, they get a leaflet that displays a QR-Code.",
+                            "<ol><li>Read through the leaflet carefully, to make sure if the QR code really is to be scanned with the Corona-Warn-App, or if it is meant for another test infrastructure.</li><li>Only if you made sure that the QR code is to be scanned with the Corona-Warn-App and not for another system, proceed in the Corona-Warn-App.</li><li>You can scan each QR code only once with the Corona-Warn-App. After scanning, the QR code expires. This prevents misusing the QR code.</li><li>If you received a QR code for your own test, scan it with the Corona-Warn-App and wait until the result is retrieved. This can take from a couple of hours up to a few days. Open the Corona-Warn-App regularly to check if the test result is already available.</li><li>If you received additional QR codes for tests of your family members, for example, your kids who do not have their own phones, DO NOT scan their QR codes with your phone. Only use your QR code with your personal test and your personal smartphone. In any case, your family will be notified about their test results independently, usually by calling them.</li><li>If your QR code doesn't work and you received a positive test result: Call the verification hotline (+49 800 7540002) to receive a TeleTAN. You can then enter the TeleTAN in your Corona-Warn-App so that the persons you encountered in the past days can be informed over the Corona-Warn-App. Please pay attention to the recommendations the Corona-Warn-App displays.</li></ol>"
+                        ]
+                    },
+                    {
+                        "title": "What do the exposure check logs show?",
+                        "anchor": "keys_matches",
+                        "active": true,
+                        "textblock": [
+                            "The exposure check logs show how many keys that report a positive test result are downloaded from the server, and how many of them are matching the keys that your phone has collected. For info about the app flow, see <a href='#risk_info' target='_blank' rel='noopener noreferrer'>How do you get information about a risk of infection?</a> for details.",
+                            "<b>Exposure checks</b>",
+                            "This value does not reflect the number of encounters. Please tap one level further: This is where the checks of up to 15 days are logged (today plus the last 14 days). Selecting an entry leads to a detailed view with the corresponding time stamps and the number of matched keys.",
+                            "<b>Provided Key Count</b> (Apple) | <b>Number of keys</b> (Android)",
+                            "This is the number of keys related to a positive test result, so called diagnosis keys, that your phone downloaded from the server.",
+                            "<b>Matched Key Count</b> (Apple) | <b>Number of matches</b> (Android)",
+                            "This is the number of keys that your phone collected for which there is a matching diagnosis key. If the number is not 0, then you had an exposure. If your risk status stays green, that is, 'Low Risk', find more information at <a href='#encounter_but_green' target='_blank' rel='noopener noreferrer'>An encounter has been reported, but the risk status stays green</a>.",
+                            "<b>Timestamp</b>",
+                            "Date and time at which the check happened. This is independent of the timestamp of potential exposures since every key stored in the downloaded files, a separate validity timestamp is stored.",
+                            "<b>Data Source</b>",
+                            "Identifies the app that initiated the check. If you, for example, also installed Immuni or SwissCovid, their app identifiers could be noted there instead of 'Corona-Warn'.",
+                            "<b>Hash</b>",
+                            "Checksum of the file containing the downloaded diagnosis keys. As long as the file content (diagnosis keys) does not change, this checksum will not change throughout the relevant time frame of 2 weeks."
+                        ]
+                    },
+                    {
+                        "title": "Will exposure logging still work when I close the app?",
+                        "anchor": "close_app",
+                        "active": true,
+                        "textblock": [
+                            "Yes. As long as you have activated exposure logging in the app and Bluetooth is on, encounters are logged in the background. The app itself doesn't have to be open for this. You can minimize it or use 'swipe-to-quit' to close it.",
+                            "To be on the safe side, open the app once a day after 24 hours. You'll find more info at <a href='https://www.coronawarn.app/en/#howto' target='_blank' rel='noopener noreferrer'>This is how the app works best</a>.",
+                            "For the risk status to be updated automatically, make sure that background updates are active. For all the info, see these FAQ:",
+                            "<ul><li><a href='#no_risk_update_ios' target='_blank' rel='noopener'>[Apple/iOS]: My risk status hasn't been updated for over a day. An internet connection was available, what's wrong?</a></li><li><a href='#no_risk_update' target='_blank' rel='noopener'>[Google/Android]: My risk status hasn't been updated for over a day. An internet connection was available, what's wrong?</a></li></ul>"
+                        ]
+                    },
+                    {
+                        "title": "How are the days since the last encounter counted?",
+                        "anchor": "days_last_risk_encounter",
+                        "active": true,
+                        "textblock": [
+                            "The number of days is counted as normal - '1 day since the last encounter' means 'yesterday', '2' the day before yesterday. The details of the technical implementation <a href='https://developer.apple.com/documentation/exposurenotification/enexposuredetectionsummary/3583708-dayssincelastexposure'>are explained here by Apple.</a>"
+                        ]
+                    },
+                    {
+                        "title": "What happens if I switch off Bluetooth and for Android, the location services?",
+                        "anchor": "bluetooth_off",
+                        "active": true,
+                        "textblock": [
+                            "Then, encounters with the other phones that have the Corona-Warn-App running are not logged, because the phones do not exchange the random IDs. Therefore, make sure to have Bluetooth and for Android, the location services, active whenever you meet someone, be it guests or when you're on the road.",
+                            "For phones running Android, the location services have to be active, but the Corona-Warn-App does not use the location information. You can deny other apps to use your location, if you want: see <a href='#android_location' target='_blank' rel='noopener'>I'm asked to activate my location</a>."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Will exposure logging still work if I turn off Bluetooth in my Control Center while keeping it activated in the system settings?",
+                        "anchor": "ios_logging_bt",
+                        "active": true,
+                        "textblock": [
+                            "Yes. The option in Control Center (see <a href='https://support.apple.com/en-us/HT208086' target='_blank' rel='noopener noreferrer'>Use Bluetooth and Wi-Fi in Control Center</a>) only disconnects your phone temporarily from any Bluetooth accessories that are currently connected. Bluetooth itself remains activated in the system settings."
+                        ]
+                    },
+                    {
+                        "title": "Will the collected random IDs be included when I back up data on my phone?",
+                        "anchor": "backup",
+                        "active": true,
+                        "textblock": [
+                            "No, they are not included in the backup. This also means that you can't restore the collected random IDs on the same or a different phone."
+                        ]
+                    },
+                    {
+                        "title": "Are the exposure logs/random IDs removed from my phone when I uninstall the app?",
+                        "anchor": "delete_random_ids",
+                        "active": true,
+                        "textblock": [
+                            "Uninstalling the app should always be a last resort for solving one of the known or other issues with the app.",
+                            "Since the app cannot delete the exposure logs by itself, whether they are cleared or not is a decision of the Exposure Notification System.",
+                            "In the current version, uninstalling the app on iOS devices leaves the exposure log intact without any guarantees for the duration of storage.",
+                            "On Android devices, the current implementation <a href='https://developers.google.com/android/exposure-notifications/exposure-notifications-api#methods' target='_blank' rel='noopener noreferrer'>deletes the 'database and keys' from the device</a> when uninstalling the app. Hence, you should expect that the collected random IDs are deleted when the app is uninstalled.",
+                            "The way un-installation is handled can change without notice and without changes to the Corona-Warn-App itself. Therefore, only uninstall the app as a last resort to resolve an error and only when instructed to, e.g., by the hotline or developers on GitHub.",
+                            "We recommend that before you re-install the app, you try clearing the app data first as this will not delete the random IDs:",
+                            "<ul><li>On iOS devices, choose 'Settings' -> 'Reset App' on the home screen.</li><li>On Android devices, choose the three dots at the top right corner of the home screen and select 'Settings' -> 'Reset App'.</li></ul>"
+                        ]
+                    },
+                    {
+                        "title": "How do you get information about a risk of infection?",
+                        "anchor": "risk_info",
+                        "active": true,
+                        "textblock": [
+                            "This is how the app works:",
+                            "<ol><li>All devices that have the Corona-Warn-App installed send and receive pseudonymized keys, which are saved locally on your device. A Bluetooth connection is only necessary for sending and receiving pseudonymized keys.</li><li>If you are diagnosed with COVID-19, you can upload your diagnosis keys to the server. At regular intervals, all devices with the app receive these keys from this server and check if they have saved a matching key via Bluetooth. For uploading, your phone must be able to access the Internet, for example, using WiFi or mobile data.</li><li>If there is a match between a key downloaded from the server and a key saved locally on your device, this means you were exposed to a person who has been diagnosed with COVID-19. Matching the encounters does not require a Bluetooth connection.</li></ol>",
+                            "The <a href='https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md' target='_blank' rel='noopener noreferrer'>Solution Architecture Document</a> describes the technical process in detail."
+                        ]
+                    },
+                    {
+                        "title": "How do I enter a negative test result?",
+                        "anchor": "test_negative",
+                        "active": true,
+                        "textblock": [
+                            "Thank you that you want to help. Corona-Warn-App is all about informing your contacts when you have tested positive for COVID-19. That's why you won't find an option for entering a negative test result."
+                        ]
+                    },
+                    {
+                        "title": "How do I share a positive test result on multiple devices?",
+                        "anchor": "test_multiple_devices",
+                        "active": true,
+                        "textblock": [
+                            "If you have more than one smartphone (e.g. work and private), we recommend that you install the CWA on your private device first. Also, when scanning QR codes and sharing a positive result, we recommend that you first use your private device. If you additionally want to share a positive result via your company device or any other additional smartphone, this can be done via a so-called TeleTAN. By contacting +49 800 7540002 with a positive test result, you will receive a 10-digit TAN with which the test result can also be registered in the app. <b>Please note:</b> The TAN number is only valid for one hour."
+                        ]
+                    },
+                    {
+                        "title": "Can I enter positive test results from other countries?",
+                        "anchor": "test_in_other_country",
+                        "active": true,
+                        "textblock": [
+                            "If you are in another EU country or in one of <a href='https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Tests.html' target='_blank' rel='noopener noreferrer'>these countries</a> and have made a molecular biological test (PCR test) which is positive, you can upload it to the Corona-Warn-App. To do so, it is necessary to verify your identity by calling the hotline +49 800 7540002. You will receive a 10-digit TAN with which the test result can be registered in the app. Attention: The TAN is only valid for one hour!"
+                        ]
+                    },
+                    {
+                        "title": "Can the Corona-Warn-App put me on sick leave, instead of my doctor?",
+                        "anchor": "sick_leave",
+                        "active": true,
+                        "textblock": [
+                            "No, it can't. The QR codes are designed to verify positive test results. When you are informed by the Corona-Warn-App, this does not replace the report from the doctor or the laboratory that provided the test. Only they can provide you with a document that you show your employer.",
+                            "The reason is, that the Corona-Warn-App follows the decentralized approach, meaning that the notifications of the Corona-Warn-App do not contain personal data such as name or date of birth. These identifiers are required for releasing you from quarantine, though.",
+                            "In addition to the displayed test results in the Corona-Warn-App, you'll get written notification from the laboratory, the test center, or your doctor."
+                        ]
+                    },
+                    {
+                        "title": "How do I tell the app that I recovered from COVID-19?",
+                        "anchor": "recovered",
+                        "active": true,
+                        "textblock": [
+                            "After your doctor or the local health authorities informed you that you've recovered from COVID-19, you reset the Corona-Warn-App:","<ol><li>Open 'Settings':<ul><li>[Google/Android]: Open the Corona-Warn-App menu by choosing the 3-dot icon on the top right.</li><li>[Apple/iOS]: Scroll down the start screen.</li></ul></li><li>Choose 'Reset App'. Confirm that you want to reset the app.</li><li>You're returned to the introduction screens of the Corona-Warn-App.</li><li>Activate the exposure logging again. As, according to current research, it cannot be ruled out that you'll be infected again, you can thus continue to do your part to break the chain of infection.</li></ol>"
+                        ]
+                    },
+                    {
+                        "title": "I'm deaf or hard of hearing, so making phone calls is a problem for me. What do I have to keep in mind when I'm using the app?",
+                        "anchor": "hearing_impaired",
+                        "active": true,
+                        "textblock": [
+                            "First of all: The app fulfills accessibility requirements (see <a href='https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md#accessibility' target='_blank' rel='noopener noreferrer'>scoping document</a>) and supports all accessibility features of your phone's operating system.",
+                            "In general, you're not required to make phone calls in connection with the Corona-Warn-App. In case of a positive test result, you will get the result via a QR code, which you can scan into the app. If the testing facility doesn't support QR codes or if you don't want to use them, you receive a TAN. Only if you have received neither a QR code nor a TAN, would you have to call the hotline, which you might not be able to do without outside help.",
+                            "If you can't make phone calls because you're hard of hearing, you should mention this during the test, because this will affect the whole communication process. You will then receive the TAN, if necessary, in writing."
+                        ]
+                    },
+                    {
+                        "title": "How often is the risk status updated?",
+                        "anchor": "risk_update_24",
+                        "active": true,
+                        "textblock": [
+                            "The Corona-Warn-App updates the risk status at least every 24 hours. The actual time can lag behind for a few hours from the time of the day before.",
+                            "Updating only around every 24 hours is due to API restrictions and to ensure consistency between the Corona-Warn-App versions for iOS and Android.",
+                            "For more information, see GitHub comment <a href='https://github.com/corona-warn-app/cwa-backlog/issues/2#issuecomment-647740143' target='_blank' rel='noopener noreferrer'>https://github.com/corona-warn-app/cwa-backlog/issues/2#issuecomment-647740143</a>.",
+                            "Improvements are on their way and they will be worked on as soon as possible."
+                        ]
+                    },
+                    {
+                        "title": "When I'm not connected to a Wi-Fi network, will I be charged for any mobile data transmitted via the app?",
+                        "anchor": "mobile_data_costs",
+                        "active": true,
+                        "textblock": [
+                            "The German network operators have committed themselves to a so-called zero rating. This means that the mobile data volume for the use of the Corona-Warn-App is provided free of charge both in Germany and within the EU. Mobile data that are transmitted via Corona-Warn-App when diagnosis keys are uploaded or when the server notifies you in case of exposure is free of charge and will not be deducted from your data plan.",
+                            "The zero rating applies to all SIM cards that are distributed by German network providers. It does not matter whether they were purchased directly from the mobile phone provider or from a partner company (e.g. discounters).",
+                            "We are not able to provide any statement for foreign providers of SIM cards. The decision whether the necessary data volumes are provided free of charge or not, is solely up to the respective provider."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Which version of the COVID-19 Exposure Notification System is currently installed?",
+                        "anchor": "ENF_version",
+                        "active": true,
+                        "textblock": [
+                            "Google publishes the infrastructure for the COVID-19 Exposure Notifications with Google Play, that is, independently of the Android operating system. The <a href='https://developers.google.com/android/exposure-notifications/doc-change-log#api-version-15' target='_blank' rel='noopener noreferrer'>version 1.5</a> release brought some improvements and bug fixes.","To check which ENS version is installed on your phone:","<ol><li>In the Settings, go to 'Google > COVID-19 exposure notifications'</li><li>Scroll down the 'COVID-19 notifications' page. At the very bottom, the version is displayed in one of the following formats:<ul><li>YYWWxxxxx, where YY is the year (for example, 20) and WW is the week. If you see the version number in this format, your phone is not yet using version 1.5.</li><li>VVYYWWxxxxx, where VV is the version of the infrastructure for COVID-19 exposure notifications (for example, 15), YY is the year and WW is the week number. If this format is displayed, the device already uses version 1.5.</li></ul></li></ol>", "Google provides general and release information about the COVID-19 exposure notifications, see:", "<ul><li><a href='https://support.google.com/android/answer/9888358?hl=en' target='_blank' rel='noopener noreferrer'>Use the COVID-19 Exposure Notifications System on your Android phone</a></li><li><a href='https://developers.google.com/android/exposure-notifications/exposure-notifications-api' target='_blank' rel='noopener noreferrer'>Exposure Notifications API</a></li><li><a href='https://developers.google.com/android/exposure-notifications/release-notes' target='_blank' rel='noopener noreferrer'>Exposure Notifications release notes</a></li><li><a href='https://developers.google.com/android/exposure-notifications/doc-change-log' target='_blank' rel='noopener noreferrer'>Exposure Notifications document change log</a></li><li><a href='https://github.com/google/exposure-notifications-internals' target='_blank' rel='noopener noreferrer'>Snapshot of code from Google Play Services's Exposure Notification module</a></li></ul>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "General",
+                "id": "general",
+                "accordion": [
+                    {
+                        "title": "Do I have to use this app?",
+                        "anchor": "have_to_use",
+                        "active": true,
+                        "textblock": [
+                            "No. The app has two functions: It enables you to retrieve test results electronically, and it helps to identify possible exposures you have had to people diagnosed with COVID-19. You are free to decide whether to retrieve your test results, and whether you want to submit your results as diagnosis keys if your results are positive. Nothing will happen without your explicit consent.",
+                            "At any point in time, you can deactivate the COVID-19 Exposure Notifications feature either in the app itself or in your device's settings, and of course you can always uninstall the app completely. When uninstalling the app, the collected exposures can be lost, see <a href='#delete_random_ids' target='_blank' rel='noopener'>Are the exposure logs/random IDs removed from my phone when I uninstall the app?</a>."
+                        ]
+                    },
+                    {
+                        "title": "How often has the Corona-Warn-App been downloaded? How many TeleTANs have been issued?",
+                        "anchor": "numbers_RKI",
+                        "active": true,
+                        "textblock": [
+                            "The Robert Koch Institute provides these and other current numbers <a href='https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Kennzahlen.pdf?__blob=publicationFile' target='_blank' rel='noopener noreferrer'>on their website</a> (in German)."
+                        ]
+                    },
+                    {
+                        "title": "What are the specific objectives of the Federal Government with the development of an exposure (contact) tracing app?",
+                        "anchor": "objectives",
+                        "active": true,
+                        "textblock": [
+                            "The main objective of the Corona-Warn-App is to notify users as quickly as possible if they have been exposed to a person diagnosed with COVID-19. From an epidemiological perspective, exposure tracing processes can be accelerated because the Corona-Warn-App helps to notify people at risk more quickly.",
+                            "This means that potential infection chains can be identified and interrupted earlier. This can also help to relax the existing restrictions in order to normalize social life.",
+                            "In addition to essential hygiene and behavior rules to prevent infection and many other measures, such as increasing the number of tests and improving exposure tracing through public health authorities, the Corona-Warn-App is another element in the fight against the coronavirus pandemic."
+                        ]
+                    },
+                    {
+                        "title": "What were the reasons for favoring the decentralized approach to exposure tracing?",
+                        "anchor": "reasoning_decentralized",
+                        "active": true,
+                        "textblock": [
+                            "In April 2020, a scientific debate emerged on the key concept \"centralized versus decentralized data storage\", which was conducted under the public eye. In addition to plausible arguments in terms of content, a partly ideological debate on centralized storage developed, which had the potential to jeopardize confidence in this technological approach.",
+                            "A loss of confidence among the public would have endangered all the efforts of identifying and breaking infection chains early using digital support. For this reason, the Federal Government took action and adapted a decentralized approach as the project philosophy."
+                        ]
+                    },
+                    {
+                        "title": "Was a risk and cost/benefit evaluation of the two variants (centralized/decentralized) carried out, and if so, can this evaluation be viewed?",
+                        "anchor": "cost_benefit",
+                        "active": true,
+                        "textblock": [
+                            "A scientifically-reliable evaluation is not available due to the complexity of this topic, the lack of practical experience with the underlying technologies, and for the reasons mentioned above.",
+                            "Both approaches have advantages and disadvantages in terms of usability and have been intensively discussed with expert personnel from university and non-university research institutions, the Robert Koch Institute, the Federal Office for Information Security (BSI) and the Federal Commissioner for Data Protection and Freedom of Information (BfDI).",
+                            "The further development of the Corona-Warn-App will also be closely accompanied by scientific research."
+                        ]
+                    },
+                    {
+                        "title": "What specific constraints has the German government imposed on the contractors, SAP and Deutsche Telekom, for the development?",
+                        "anchor": "constraints",
+                        "active": true,
+                        "textblock": [
+                            "Besides the decentralized storage of encounters using the interfaces provided by Google and Apple, the discussions also focused on the publication of the developed software components under an open source license.",
+                            "The app will be available in the official Google and Apple app stores.",
+                            "An additional requirement for the development process was the early and intensive involvement of the BfDI and the BSI, as well as close coordination with these bodies.",
+                            "As this is an agile development process, requirements are constantly evolving."
+                        ]
+                    },
+                    {
+                        "title": "Where can I find information, ask questions, or discuss topics regarding the Corona-Warn-App that are not development-related?",
+                        "anchor": "non_dev_related",
+                        "active": true,
+                        "textblock": [
+                            "The open source project for the Corona-Warn-App on <a href='https://github.com/corona-warn-app' target='_blank' rel='noopener noreferrer'>github.com/corona-warn-app</a> and the website <a href='https://www.coronawarn.app/en/' target='_blank' rel='noopener noreferrer'>coronawarn.app</a> is all about the open source development of the app. For information about general topics, legal matters, and using the app, you can also see <a href='https://www.bundesregierung.de/breg-de/themen/corona-warn-app/corona-warn-app-englisch' target='_blank' rel='noopener noreferrer'>bundesregierung.de/breg-de/themen/corona-warn-app/corona-warn-app-englisch</a>. For questions related to these topics, please use the <a href='https://www.bundesregierung.de/breg-en/service/contact' target='_blank' rel='noopener noreferrer'>contact form of the Federal Government</a>.", "You can also read information about using the app and about privacy directly from the app. In the app menu, go to App Information, and there, choose Terms of Use and Data Privacy Information."
+                        ]
+                    },
+                    {
+                        "title": "Is there a central entity in control of all exposure events?",
+                        "anchor": "central_entity",
+                        "active": true,
+                        "textblock": [
+                            "The app itself does not store any information about individual potential exposure events. The Exposure Notification System, on which the app is based, stores the visible Rolling Proximity Identifiers (RPIs) on the devices that are located in close proximity and within a defined time period. Even if the central server infrastructure is compromised, this information cannot be linked back to a device without having access to it in the first place. Even then, the app itself cannot access the RPIs. Diagnosis keys can only be accessed with user consent and then only for a short period of time. Information that links diagnosis keys and connection metadata is removed before this data is processed."
+                        ]
+                    },
+                    {
+                        "title": "Who operates the app backend?",
+                        "anchor": "backend_ops",
+                        "active": true,
+                        "textblock": [
+                            "The backend of the app is operated by Deutsche Telekom. <a href='https://open-telekom-cloud.com/' target='_blank' rel='noopener noreferrer'>Open Telekom Cloud (OTC)</a> is used here."
+                        ]
+                    },
+                    {
+                        "title": "How do the server and device communicate with each other?",
+                        "anchor": "client_server",
+                        "active": true,
+                        "textblock": [
+                            "You can find more information in our <a href='https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md' target='_blank' rel='noopener noreferrer'>Solution Architecture Document</a>."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Open Source",
+                "id": "open-source",
+                "accordion": [
+                    {
+                        "title": "Why are we following an open-source approach?",
+                        "anchor": "why_oss",
+                        "active": true,
+                        "textblock": [
+                            "We believe that the success of the app depends directly on user acceptance and trust. With an open source approach, the full source code for the app and the infrastructure are freely available without access restrictions. In this way, we create the transparency necessary for a strong basis of trust.",
+                            "Furthermore, the open-source approach gives the broader public and the developer community the opportunity to actively contribute to the app’s success, for example, through reviews and pull requests."
+                        ]
+                    },
+                    {
+                        "title": "Can I really see all source code of the project?",
+                        "anchor": "oss_complete",
+                        "active": true,
+                        "textblock": [
+                            "Yes. All code central to risk identification and propagation functionality is available openly on GitHub. Reviews are possible before and after the app is released. Questions about topics such as security, data privacy will be clarified with the community. Each person can create their own build of the app and test it. Apart from the source code, we also discuss central issues there. The discussion posts remain publicly available on the GitHub."
+                        ]
+                    },
+                    {
+                        "title": "How will the development status in GitHub be uploaded to the app stores?",
+                        "anchor": "dev_status",
+                        "active": true,
+                        "textblock": [
+                            "The app is developed using standard tools (such as Xcode and Android Studio) and uploaded to Apple App Store and Google Play Store.",
+                            "We will be able to publish information as soon as it is available on the issue as to whether the code in GitHub is really the same as that in the app in the respective app stores ('reproducible builds'). You can find further information on the progress of this issue in the respective <a href='https://github.com/corona-warn-app/cwa-documentation/issues/14' target='_blank' rel='noopener noreferrer'>GitHub issue</a>."
+                        ]
+                    },
+                    {
+                        "title": "How can the development community contribute to the project? ",
+                        "anchor": "how_to_contribute",
+                        "active": true,
+                        "textblock": [
+                            "The open-source project uses GitHub, a globally known online service that hosts software development projects on its servers. Anyone interested can get involved in the project here, for example, by removing mistakes in the source code, helping with the documentation, raising questions or commenting on the project.",
+                            "Collaboration within the community follows a defined code of conduct. You can find all the guidelines for participation <a href='/en/community/'>here</a>."
+                        ]
+                    },
+                    {
+                        "title": "Why are you using GitHub instead of a different platform?",
+                        "anchor": "github",
+                        "active": true,
+                        "textblock": [
+                            "We believe that GitHub is a well-established, respected platform for open-source projects. It is the world's largest open-source platform, with more than 40 million users and over 100 million repositories, over 30 million of which are publicly accessible.",
+                            "If someone does not want to create a GitHub account, they can view the source code without an account."
+                        ]
+                    },
+                    {
+                        "title": "What code of conduct applies?",
+                        "anchor": "coc",
+                        "active": true,
+                        "textblock": [
+                            "Successful development in a productive, collaborative community is only possible through mutual respect. All members of the project must follow a <a href='https://github.com/corona-warn-app/cwa-documentation/blob/master/CODE_OF_CONDUCT.md' target='_blank' rel='noopener noreferrer' title=''>Code of Conduct</a>.",
+                            "Any member can report violations of the code of conduct to the project managers or to <a href='mailto:corona-warn-app.opensource@sap.com'>corona-warn-app.opensource@sap.com</a>. Violators may face consequences such as warnings or even exclusion from participating in the project."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Privacy and Security",
+                "id": "privacy_security",
+                "accordion": [
+                    {
+                        "title": "Can data privacy be guaranteed?",
+                        "anchor": "data_privacy",
+                        "active": true,
+                        "textblock": [
+                            "Decentralized data storage on user devices guarantees data privacy.",
+                            "We are working very closely together with experts from the data privacy community and coordinating with one another throughout the development process. We also prepared a separate document dedicated to data security, which is published <a href='/assets/documents/cwa-datenschutz-folgenabschaetzung.pdf' target='_blank' rel='noopener noreferrer'>here</a> on coronawarn.app.",
+                            "Furthermore, the open-source approach of the source code enables the community to review the functionality of the app and to leave comments."
+                        ]
+                    },
+                    {
+                        "title": "Which data will be saved and who can access this data through Bluetooth?",
+                        "anchor": "data_access",
+                        "active": true,
+                        "textblock": [
+                            "Bluetooth is used to send constantly changing random IDs from other devices that have installed the app. No personal, geo-location, or other location data is sent or stored.",
+                            "Using the Exposure Notification API from Google and Apple, the random IDs remain in a secure area of the device's operating system. The matching, which determines whether someone has been exposed to an infected person, is performed on the local device. The device does not send any data for matching.",
+                            "As soon as a user is diagnosed with COVID-19, they're asked to share their temporary exposure keys from the last 14 days. These keys can only be accessed by the Exposure Notification API if the user actively gives consent."
+                        ]
+                    },
+                    {
+                        "title": "Can I be identified as COVID-19-positive by network traffic monitoring?",
+                        "anchor": "traffic_monitoring",
+                        "active": true,
+                        "textblock": [
+                            "State of the art and well-established encryption mechanisms, for example using HTTP over TLS (HTTPS), ensure that messages are not readable for outside viewers. Metadata is removed before processing user data for the transmission of diagnosis keys. This prevents data from being linked together at database level.",
+                            "Furthermore, various additional technical measures will be introduced shortly, for example, by randomly creating and sending false notifications that will be discarded on the server side. These false notifications cannot be distinguished from valid notifications and create a type of background noise. The transmission of TANs and upload of real infection data cannot be distinguished from this background noise. So, even with monitored network traffic, plausible deniability is still possible."
+                        ]
+                    },
+                    {
+                        "title": "How do you guarantee that I remain anonymous when using the Corona-Warn-App?",
+                        "anchor": "anonymous",
+                        "active": true,
+                        "textblock": [
+                            "Devices in close proximity to yours collect “rolling proximity identifiers” (RPI). These are IDs that guarantee data privacy and change constantly in short intervals, thereby preventing devices from being tracked. Apart from these IDs, other devices in close proximity cannot retrieve any other information from your device. These IDs can only be linked to pseudonymous diagnosis keys, which are needed to perform risk identification. A connection with user IDs or your device's International Mobile Equipment Identity (IMEI) is not possible.",
+                            "Since these IDs change every 10 - 20 minutes, a person sitting next to you every day in a bus could not link you to an ID even if the list of available RPIs was visible. The only time you must identify yourself is if you give your consent to upload your diagnosis keys via TeleTAN. This identification is just for verification reasons and does not disclose any other personal information. You could even use a different device to upload your diagnosis keys instead of the device on which the Corona-Warn-App is installed.",
+                            "<b>Why were dummy keys (fake diagnostic keys) initially created and used?</b><br/>A very small number of dummy keys could possibly result in transmitted diagnostic keys being assigned to a single user. To minimise this risk, fake diagnostic keys (dummy keys) were initially generated. This increased the number of diagnostic keys in the system in order to minimise the described re-identification risk.",
+                            "<b>Why is it now possible to do without the generation and use of dummy keys (fake diagnostic keys)?</b><br/>Due to the current increase in the number of infections, many diagnostic keys are already being managed in the CWA. Therefore the risk of re-identification is currently considered very low. With the connection of the CWA to the European Federation Gateway Service (EFGS), the number of diagnostic keys in the system will increase even further, as diagnostic keys from users in other countries will also be added. For this reason, the generation and use of fake diagnostic keys (dummy keys) can be easily avoided.",
+                            "<b>Will dummy keys (fake diagnostic keys) be used again if the corona pandemic should abate?</b><br/>If no better alternatives are found in the meantime, the generation of dummy keys (fake diagnosis keys) can be activated at short notice if required."
+                        ]
+                    },
+                    {
+                        "title": "Can transmitted information be linked back to me and my past activities?",
+                        "anchor": "traceback",
+                        "active": true,
+                        "textblock": [
+                            "Your device generates temporary exposure keys. These are generated randomly and only on your device. It is cryptographically not possible to trace two randomly-generated diagnosis keys back to a device without having further information or gaining access to the device's secure storage. In addition, only keys from the last 14 days are reported. It is not possible or planned to track any other data."
+                        ]
+                    },
+                    {
+                        "title": "Is movement or exposure data saved centrally?",
+                        "anchor": "central_storage",
+                        "active": true,
+                        "textblock": [
+                            "Your location and data about your possible exposure to people diagnosed with COVID-19 are never stored centrally. At any given point, the system is only aware that a diagnosis key belongs to a person diagnosed with COVID-19. The system does not know who this person met, nor when or where the encounter took place. No identification is required for the app to identify that an encounter took place. You only have to identify yourself to retrieve test results and to submit your diagnosis key. Linking the app to any social media profiles is not, and will not in future, be implemented in this project."
+                        ]
+                    },
+                    {
+                        "title": "What personal data is stored in the app?",
+                        "anchor": "personal_data",
+                        "active": true,
+                        "textblock": [
+                            "As mandated by the General Data Protection Regulation (GDPR), data minimization is a paramount principle in the implementation of the app. The only inputs that users can and have to provide to the app are:",
+                            "<ul><li>Permissions for using the Exposure Notification System</li><li>TANs for test result verification</li><li>Consent to upload daily diagnosis keys</li></ul>",
+                            "Location data is not and cannot be collected by apps using the Exposure Notification System. Diagnosis keys are only stored centrally for the epidemiologically relevant period of 14 days and removed automatically after that period."
+                        ]
+                    },
+                    {
+                        "title": "Is Bluetooth really secure? What can I do to prevent attackers from introducing malicious software into my device?",
+                        "anchor": "bt_security",
+                        "active": true,
+                        "textblock": [
+                            "To increase the security of your device in general, you should always install the latest security updates as well as the latest operating system version for your device. By doing this, you make sure that your device fulfills the latest security specifications of the Bluetooth protocol that are available.",
+                            "Especially Android systems should always be on the latest Android version (typically published in the previous month, see <a href='https://source.android.com/security/bulletin' target='_blank' rel='noopener noreferrer'>Android Security Bulletins</a>). Here you can find detailed information on how to find the latest Android version for your device: <a href='https://support.google.com/android/answer/7680439?hl=en' target='_blank' rel='noopener noreferrer'>Check & update your Android version</a>."
+                        ]
+                    },
+                    {
+                        "title": "Doesn’t the open-source approach, which involves publishing the source code, put cybersecurity at risk?",
+                        "anchor": "oss_dangerous",
+                        "active": true,
+                        "textblock": [
+                            "On the contrary: the open-source community increases the level of security of the software, because the source code is open to all and anyone can download it and comb through it line by line.",
+                            "We believe that security is not helped by a lack of transparency. That is why we are taking an open-source approach."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Resolved",
+                "id": "resolved",
+                "accordion": [
+                   {
+                        "title": "[Apple/iOS]: Exposure Check Failed after updating to version 1.6.0",
+                        "anchor": "expcheck_160",
+                        "active": true,
+                        "textblock": [
+                             "<b>UPDATE</b><br/>This issue has been fixed in version 1.6.1.<hr/>", 
+                             "After an update to app version 1.6.0, you might get the error 'Exposure Check Failed', even though there was a successful check in the past 24 hours. We are working on a solution for this error. In the meantime, try restarting your app. This helps in most cases."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Migrating to new phone and backup and restore - app does not work",
+                        "anchor": "migration_Apple",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/>This problem has been solved with version 1.5.0.<hr/> If you transfer your data to a new iPhone using iTunes, or restore a backup, the app does not work properly. On the start screens, you end up in a loop, or the exposure logging cannot be activated. The risk status is not displayed.",
+                            "This is a known problem with backing up the random IDs, see also <a href='https://www.coronawarn.app/en/faq/#backup' target='_blank' rel='noopener noreferrer'>https://www.coronawarn.app/en/faq/#backup.</a>",
+                            "Please reinstall the Corona-Warn-App on your new iPhone."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: 'COVID-19 exposure logging... - Weekly Update'",
+                        "anchor": "notif_weekly_update",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/>The behaviour of the iOS notification regarding exposure notifications has been changed with iOS version 13.7. A notification is now displayed in a monthly interval. It can be deactivated in the iOS settings:<br/>",
+                            "<ol><li>'Settings' -> 'Exposure Notifications'</li><li>Deactivate 'Monthly Update'.</li></ol>",
+                            "We therefore ask you to update to the newest iOS release.<hr/>",
+                            "This is a general notification, which does not mean that risk encounters have been identified. It is <b>not</b> a message or function of the Corona-Warn-App. Apple's Exposure Notification System (ENS) sends this notification and displays the icon. Apple's ENS provides information about any encounters with app users who were tested positive - without making a statement as to whether or not it was a critical encounter according to the Robert Koch Institute's algorithm. For example, encounters are also displayed in case the distance was more than 8 meters or in case it only lasted a few minutes. This means that the 'Weekly Update' only provides information about technical procedures of the ENS that are insufficient for an actual risk calculation. A reliable risk calculation takes place exclusively in the Corona-Warn-App under the scientific framework of the Robert Koch Institute. You can view your current risk status directly in the Corona-Warn-App."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Error when communicating with Google API (39508)",
+                        "anchor": "API39508",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/>This bug has been fixed with the currently available version 1.5 of the Corona Warn App. We therefore ask you to update the app accordingly.<br/><b>IMPORTANT:</b><br/><b>After updating to version 1.5 it will take up to 24 hours until the error is gone.</b>",
+                            "If you are still receiving the error after updating to 1.5 and waiting 24 hours, please report it in the <a href='https://github.com/corona-warn-app/cwa-app-android/issues/1459' target='_blank' rel='noopener noreferrer'>associated GitHub issue</a>.<hr/>",
+                            "The notification indicates that the Corona-Warn-App has called the Exposure Notification System too often to downloaded the keys from the server and match them with the locally stored random IDs. This is how it can be determined if there were exposures to persons who reported positive.",
+                            "It can be triggered by various other errors, but is always a consequence of them, not the root cause. The error should disappear after 24 hours. Please keep your app closed for this timeframe.",
+                            "If it still occurs afterwards, please comment in the <a href='https://github.com/corona-warn-app/cwa-app-android/issues/1459' target='_blank' rel='noopener noreferrer'>associated GitHub issue</a> and provide the following information about your phone: <ul><li>Device name</li><li>Android version</li><li>CWA App version</li></ul>",
+                            "We ask you to not de-install the app or to reset the data of Google Play Services, because this can remove <a href='#delete_random_ids' target='_blank' rel='noopener'>the logged exposures</a>, and it will not resolve this issue. Additionally, we ask you to not delete the app data of Corona-Warn-App, as this will also not resolve the issue in this case, but you might lose other important data, like a formerly registered COVID-19 test."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Cause: 9002 Something went wrong (timeout)",
+                        "anchor": "cause9002_timeout",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/>This bug has been fixed with the currently available version 1.5 of the Corona Warn App. We therefore ask you to update the app accordingly.<br/><hr/>",
+                            "If, when opening Corona-Warn-App, the current keys of positively tested users are to be downloaded from the server (because automatic data synchronization was not yet carried out on that day) and no internet connection can be established, you may receive the following error message: 'Cause: 9002, Something went wrong. timeout'. A 'java.net.SocketTimeoutException' is given as the cause under 'Details'. There are two different known causes that can lead to this error:",
+                            "<ol><li><b>The internet connection is still being established.</b> If you have just switched on previously deactivated data connections (Wi-Fi or mobile) or restarted your phone and immediately open Corona-Warn-App, the internet connection may not have been fully established yet. There are also special apps that only enable data connections when the screen is switched on. In these cases the error message can occur. <b>Solution:</b> If the internet connection was deactivated or interrupted, wait a few seconds after switching on the internet connection before opening Corona-Warn-App. If you use an app to control data connections, set it up so that data connections in the background are enabled for Corona-Warn-App.</li><li><b>The internet connection is blocked.</b> This can be the case if you have either manually restricted data connections in your phone’s settings or if data connections for Corona-Warn-App have been automatically deactivated by your antivirus app and/or  firewall. <b>Solution:</b> Enable data usage in general as well as background data and unrestricted data usage in the settings of your phone for Corona-Warn-App. If you use an antivirus app and/or firewall on your phone, set it up so that there are no data usage restrictions for Corona-Warn-App.</li></ol>",
+                            "Please refer to <a href='https://github.com/corona-warn-app/cwa-app-android/issues/998' target='_blank' rel='noopener noreferrer'>GitHub issue 998</a> for more information."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Cause: 9002 Something went wrong (sqlite)",
+                        "anchor": "cause9002",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/>This bug has been fixed with the currently available version 1.5 of the Corona Warn App. We therefore ask you to update the app accordingly.<br/><hr/>",
+                            "On some phones (for example, Huawei P20 Pro), there could be problems when accessing the encrypted area of the app database, where the info for the risk status and the last updates are stored. Usually, this error displays a Cause: 9002 message with hints to the database used, SQLite, sqlite_master, a security exception, or an error with the decryption. It can sometimes be that you can't open the app.",
+                            "We're working on identifying the cause and fixing it then. For details, see <a href='https://github.com/corona-warn-app/cwa-app-android/issues/642' target='_blank' rel='noopener noreferrer'>https://github.com/corona-warn-app/cwa-app-android/issues/642</a>. There, we will keep you updated for fixing the error and additional hints.",
+                            "If your phone type is not yet covered in the GitHub issue, write us the type in a comment. This helps us to determine the cause. If the GitHub issue doesn't cover your cause 9002 error, create a <a href='https://github.com/corona-warn-app/cwa-app-android/issues/new?labels=bug&template=01_bugs.md' target='_blank' rel='noopener noreferrer'>new issue</a>.",
+                            "<b>If you can no longer open the app, please read the section <a href='#app_crash' target='_blank' rel='noopener'>'Corona-Warn-App is closed immediately after starting'</a>.</b>"
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Corona-Warn-App is closed immediately after starting",
+                        "anchor": "app_crash",
+                        "active": true,
+                        "textblock": [
+                            "<b>UPDATE</b><br/>This bug has been fixed with the currently available version 1.5 of the Corona Warn App. We therefore ask you to update the app accordingly.<br/><hr/>",
+                            "If Corona-Warn-App is unexpectedly terminated due to an error in the operating system or aggressive energy-saving measures taken by the phone, it may happen that the Corona-Warn-App can no longer access its encrypted databases when it is restarted. In this case, it is closed immediately on start. Sometimes the <a href='#cause9002' target='_blank' rel='noopener'>error Cause: 9002 Something went wrong (sqlite)</a> was displayed before.",
+                            "We are working flat out to find a solution to the problem.",
+                            "The GitHub community has developed an emergency solution that brings the Corona-Warn-App up and running again without uninstalling it. However, since data can be lost in this case (e.g. registered COVID-19 tests for online querying of the test results), you should only use this emergency solution if no other measures were helpful (in particular suggestions from the technical telephone hotline or from supervisors of the Corona-Warn-App in the Google Play Store), and you have fully taken note of the information on the emergency solution in the GitHub issue.",
+                            "<a href='https://github.com/corona-warn-app/cwa-app-android/issues/1053#issuecomment-690615473' target='_blank' rel='noopener noreferrer'>Find the emergency solution in the GitHub issue here</a>."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Exposures are displayed for more than 14 days",
+                        "anchor": "status_14",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: This Issue was resolved in version 1.2. Exposures are displayed for up to 14 days after you encountered the user who then uploaded a diagnosis key using the Corona-Warn-App.",
+                            "For some phones running Android, the exposures currently are displayed for more than 14 days. We're working on fixing this display error. You'll find up-to-date information in <a href='https://github.com/corona-warn-app/cwa-app-android/issues/911' target='_blank' rel='noopener noreferrer'>GitHub issue 911</a>."
+                        ]
+                    },
+                     {
+                        "title": "[Google/Android]: 0 keys displayed",
+                        "anchor": "keys0",
+                        "active": true,
+                        "textblock": [
+                           "UPDATE: This display error was resolved by a Google Play Services update, see <a href='https://github.com/corona-warn-app/cwa-app-android/issues/744#issuecomment-659255917' target='_blank' rel='noopener noreferrer'>this GitHub comment</a>.",
+                           "This is a known display error. The app still works as intended. We're currently working to solve this problem together with Google."
+                        ]
+                    },
+                    {
+                        "title": "When will the app be ready?",
+                        "anchor": "when_ready",
+                        "active": true,
+                        "textblock": [
+                            "The app is available since June 16, 2020. You can download it from Google Play Store and Apple App Store. The development progress can still be tracked in the code repositories."
+                        ]
+                    },
+                    {
+                       "title": "[Apple/iOS]: Problems after updating to iOS 13.6",
+                       "anchor": "iOS_136",
+                       "active": true,
+                       "textblock": [
+                            "UPDATE: Apple has now released iOS version 13.6.1, which fixes this error. Please update your phone to iOS 13.6.1.",
+                           "After updating to the iOS version 13.6, exposure logging couldn't be activated on some iPhones because exposure logging was seemingly not available in their region. For details, see GitHub issue <a href='https://github.com/corona-warn-app/cwa-app-ios/issues/911' target='_blank' rel='noopener noreferrer'>https://github.com/corona-warn-app/cwa-app-ios/issues/911</a>."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS] I cannot open the app",
+                        "anchor": "app_does_not_open",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: App version 1.2.1 is now available and resolves this issue. Please update your app.",
+                            "Unfortunately, an error was introduced with the latest update (1.2.0): Many users were not able to open the app."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android] The explanation for a risk encounter on the low risk card is contradictory",
+                        "anchor": "low_risk_text",
+                        "active": true,
+                        "textblock": [
+                             "UPDATE: This error has already been corrected. The correction is available with app version 1.2.1. Please update the app.",
+                            "With the latest update (1.2.0), a misleading explanatory text was introduced for a low risk of infection. If there was an exposure and the app still shows a low risk for you, the risk of infection is still ranked as 'low' and not as 'increased' (as described in the current text)."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Wrong number of active days",
+                        "anchor": "days_active_Apple",
+                        "active": true,
+                        "textblock": [
+                            "Update: This display error is resolved by now. Please update the Corona-Warn-App to the latest version. The app will now count up the number of active days, until the 14 active days are reached, as intended.",
+                            "When counting the active days, an error is displayed currently: When '14 of 14 active days' is reached, the number of active days doesn't display 14 out of 14, but keeps displaying 13 out of 14 active days or fewer.",
+                            "This is only a display error. The Corona-Warn-App continues to work as intended, that means, the IDs are still exchanged and the exposure logging still works. No data is lost. Technically, it is a rounding error that displays when the number of active days of the exposure logging does not increase any more, but stays 14 days. When the exposure logging was inactive in any way, even for a short amount of time, the counter stays at a lower number of days, for example, 13 active days.",
+                            "Exposure logging can be deactivated, for example, by the following:",
+                            "<ol><li>Bluetooth was deactivated, even for a short amount of time</li><li>Background updates for the app where not active, so that exposure logging was not done continuously</li><li>Flight mode was active, even for a short amount of time</li><li>The smartphone was turned off</li><li>The smartphone was restarted</li></ol>",
+                            "For detailed information, see <a href='https://github.com/corona-warn-app/cwa-app-android/issues/796#issuecomment-653061512' target='_blank' rel='noopener noreferrer'>this comment on GitHub</a>."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Wrong number of active days",
+                        "anchor": "days_active_Android",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: This display is updated in the meantime. If nonetheless another day count displays, see <a href='#exposure_check' target='_blank' rel='noopener'>My exposure log shows checks for less than 14 days</a>.",
+                            "When counting the active days, an error is displayed currently: When '14 of 14 active days' is reached, the number of active days doesn't display 14 out of 14, but keeps displaying 13 out of 14 active days or fewer.",
+                            "This is only a display error. The Corona-Warn-App continues to work as intended, that means, the IDs are still exchanged and the exposure logging still works. No data is lost. Technically, it is a rounding error that displays when the number of active days of the exposure logging does not increase any more, but stays 14 days. When the exposure logging was inactive in any way, even for a short amount of time, the counter stays at a lower number of days, for example, 13 active days.",
+                            "Exposure logging can be deactivated, for example, by the following:",
+                            "<ol><li>Bluetooth or the location service were deactivated, even for a short amount of time</li><li>Background updates for the app where not active, so that exposure logging was not done continously</li><li>Flight mode was active, even for a short amount of time</li><li>The smartphone was turned off</li><li>The smartphone was restarted</li></ol>",
+                            "It is planned that this will be resolved with the next release.",
+                            "For detailed information, see <a href='https://github.com/corona-warn-app/cwa-app-android/issues/796#issuecomment-653061512' target='_blank' rel='noopener noreferrer'>this comment on GitHub</a>"
+                        ]
+                    },
+                    {
+                        "title": "Why does the app stop at 14 of 14 days saved? What does 14 of 14 days save actually mean?",
+                        "anchor": "days_active_explanation",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: This display is updated in the meantime. If nonetheless another day count displays, see <a href='#exposure_check' target='_blank' rel='noopener'>My exposure log shows checks for less than 14 days</a>.",
+                            "The Corona-Warn-App logs exposures for the past 14 days. Older exposures are not relevant for the risk assessment and will therefore be discarded. Hence, the app will always show \"14 of 14 days saved\" if it was active for the entire time frame. The count does not start over after 14 days. If exposure logging is active and a risk status is being displayed, the app is working as expected.",
+                            "If you temporarily deactivate the app after 14 days, the displayed number can jump back to 13 (or fewer) active days. This can be triggered by the following activities:<ul><li>Disabling bluetooth</li><li>Disabling the background app refresh so that risk assessment could not be performed</li><li>Enabling flight mode</li><li>Turning off your smartphone</li><li>Restarting your smartphone</li></ul>"
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: Error when communicating with Google API(10)",
+                        "anchor": "API10",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: This error is resolved by version 1.5 of the Exposure Notification System. For details about your ENS version, see <a href='#ENF_version' target='_blank' rel='noopener'>Which version of the COVID-19 Exposure Notification System is currently installed?</a>",
+                            "This error, in connection with missing risk identification, is currently fixed together with Google. Exposure logging works as intended. Please do not uninstall the app, because this can remove the logged exposures, see also <a href='#delete_random_ids' target='_blank' rel='noopener'>https://www.coronawarn.app/en/faq/#delete_random_ids</a>."
+                        ]
+                    }, 
+			{
+                        "title": "[Apple/iOS]: ENErrorDomain-Error 11",
+                        "anchor": "ENError11",
+                        "active": true,
+                        "textblock": [
+                           "UPDATE: Although Apple stated that this Issue has been fixed with iOS 13.6, it's currently appearing again on devices which run iOS 14 or higher. To fix it please open the iOS settings and go to 'Exposure Notification', scroll down to the bottom and click 'Turn Off Exosure Notifications' and turn it back on again.",
+                           "The ENErrorDomain 11 error is thrown by Apple's Exposure Notification System, which is used by the Corona-Warn-App."
+                        ]
+                    },
+			{
+                        "title": "[Apple/iOS]: ENErrorDomain-Error 5",
+                        "anchor": "ENError5",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: The ENErrorDomain 5 error is thrown by Apple's Exposure Notification System, which is used by the Corona-Warn-App. According to Apple, the cause is already fixed, and therefore, it shouldn't occur any more. If the error still occurs, please be patient until the change reaches your device."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: ENErrorDomain-Error 13",
+                        "anchor": "ENError13",
+                        "active": true,
+                        "textblock": [
+                           "UPDATE: After you updated to iOS version 13.6., this error is gone.",
+                           "The ENErrorDomain 13 error is thrown by Apple's Exposure Notification System, which is used by the Corona-Warn-App.  It is the information that on this day, an exposure check already took place. Please restart your phone and do not open the app for 24 hours. Then, the next exposure identification takes place and this information should no longer be displayed. Please do not remove and reinstall the Corona-Warn-App, as it still works as intended."
+                        ]
+                    },{
+                        "title": "[Apple/iOS]: I sometimes get the following notification: 'Exposure Notifications Region Changed. COVID-19 Exposure Notifications may not be supported by \"Corona-Warn\" in this region.'",
+                        "anchor": "iphone_region_change",
+                        "active": true,
+                        "textblock": [
+                           "UPDATE: After you updated to iOS version 13.6., this message is gone.",
+                           "This message is issued directly by the Exposure Notification System of the operating system. You can choose 'OK' to confirm the message, exposure logging works as intended. To check this, you can also navigate to 'Settings' > 'Privacy' > 'Health' > 'COVID-19 Exposure Logging' (iOS 13.7 or higher: 'Settings' > 'Exposure Notifications' > 'Exposure Logging Status') on your device to check the status. This is an iOS bug and Apple is already working on a solution, which is expected to be delivered with the next iOS update. Please open the Corona-Warn-App once again to make sure that the background app refresh continues to work."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: Not enough memory for the contact protocol",
+                        "anchor": "memory",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: This error is raised by the operating system. After you updated to Apple iOS version 13.6., this error should be gone.",
+                            "The Corona-Warn-App uses just about 20 MB of smartphone storage. The size can vary slightly due to updates. In addition, the app caches some data."
+                        ]
+                    },
+                    {
+                        "title": "[Google/Android]: While setting up the app, I’m getting the following error: 'CAUSE: 3. Something went wrong. Error when communication with Google API (17).' What does this mean?",
+                        "anchor": "cause_3",
+                        "active": true,
+                        "textblock": [
+                            "UPDATE: This error is fixed in the meantime.",
+                            "This error can occur when you activate exposure logging for the first time or later in the settings or on the main screen of the app. It means that your device cannot log exposure for one or more of the following reasons:",
+                            "<ul><li>Google Play Services are outdated.</li><li>The app is not available with Google Play for your country. See <a href='https://www.coronawarn.app/en/faq/#international' target='_blank' rel='noopener noreferrer'>this FAQ</a> for the supported country versions.</li><li>You haven’t installed Corona-Warn-App via the official Google Play Store.</li><li>Your device has been modified (e.g. by rooting).</li><li>You have multiple user accounts on your device and the user that you use Corona-Warn-App with doesn’t have administrator rights.</li><li>The manufacturer of your device hasn’t made Google Play Services and Google Play Store available for your device. This affects some models by Huawei und Xiaomi, for example.</li><li>Google Mobile Services are outdated.</li></ul>",
+                            "<b>Troubleshooting</b>",
+                            "Many affected users were able to get rid of this error through the following steps:",
+                            "<ol><li>Update your Google Play Services to the latest version. See: <a href='https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en' target='_blank' rel='noopener noreferrer'>Google Play Services</a>. In the device settings under 'Apps & notifications' > 'Google Play Services' > 'Advanced', you can check your version at the bottom. Please also see the note on Google Mobile Services at the bottom of this answer.</li><li>Clear the cache of the Google Play Services in the device settings under 'Apps & notifications' > 'Google Play Services' > 'Storage' > 'Clear cache'.</li><li>Change your Google Play country to Germany as described here: <a href='https://support.google.com/googleplay/answer/7431675?hl=de' target='_blank' rel='noopener noreferrer'>Change your Google Play country</a>.</li><li>Check if your device generally supports exposure logging in Germany. In the device settings under 'Google' > 'COVID-19 Exposure Notifications', Corona-Warn-App should be listed.</li><li>Make sure that the user account that you’re using on your device has administrator rights. In the device settings, go to 'System' > 'Advanced' > 'Multiple users'.</li><li>Before you install Corona-Warn-App make sure that you’re connected to the internet and that you have activated Bluetooth and Location (see also <a href='https://www.coronawarn.app/en/faq/#android_location' target='_blank' rel='noopener noreferrer'>here</a>).</li><li>Restart your device.</li><li>If nothing else worked, because doing so could remove the already collected random IDs (see <a href='#delete_random_ids' target='_blank' rel='noopener'>https://www.coronawarn.app/en/faq/#delete_random_ids</a>): Uninstall the Corona-Warn-App and reinstall it from the Google Play Store (<a href='https://play.google.com/store/apps/details?id=de.rki.coronawarnapp&hl=en&showAllReviews=true' target='_blank' rel='noopener noreferrer'>Corona-Warn-App</a>).</li></ol>",
+                            "If the error persists even though you went through all steps listed above, Possibly a short wait is necessary for your device to activate Exposure Logging. Please close Corona-Warn-App and wait for two hours before trying again.",
+                            "Note on Google Mobile Services: For Corona-Warn-App to work, Google Mobile Services has to be automatically updated on the device by Google. You cannot manually trigger this update. If you have already updated the Google Play Services as described above, you have to wait for the automatic update of Google Mobile Services. Try using the app again the next day.",
+                            "We’re constantly improving the app and will try to remove possible app-related causes of this error."
+                        ]
+                    },
+                    {
+                        "title": "[Apple/iOS]: In my COVID-19 Exposure Logging settings it says: 'Corona-Warn has checked your log of collected random IDs 0 times over the past 24 hours.' Does this mean that exposure logging isn’t working?",
+                        "anchor": "no_log_check",
+                        "active": true,
+                        "textblock": [
+                            "UDPATE: This notification is no longer displayed since the diagnosis keys are available on the server.",
+                            "Exposure logging is working, don’t worry. You can find this iOS note under 'Settings' > 'Privacy' > 'Health' > 'COVID-19 Exposure Logging' (iOS 13.7 or higher: 'Settings' > 'Exposure Notifications' > 'Exposure Logging Status'). It means that the back-end server has not sent any diagnosis keys to your device yet. Thus, the Corona-Warn-App hasn’t received any keys to check against the collected random IDs on your phone. As soon as persons diagnosed with COVID-19 have uploaded their diagnosis keys, this check is triggered."
+                        ]
+                    },
+                    {
+                        "title": "Exposure Notification Express (ENE)",
+                        "anchor": "ene",
+                        "active": true,
+                        "textblock": [
+                            "Exposure Notification Express (ENE) was additionally developed by Google and Apple to support health authorities worldwide who do not yet have an app and cannot or do not want to develop an app themselves. ENE simply provides standardized Covid-19 notifications, but does not digitize the process to the test result.",
+                            "Although risk encounters can be displayed, the diagnostic keys cannot be transmitted without further verification if the test result is positive. Nor can test results be transmitted with ENE.",
+                            "For the German Corona-Warn-App (CWA), the introduction of Exposure Notification Express does not currently change anything. Regions that operate an app adapted to their own needs will continue to receive the encounter notifications from the Exposure Notification System directly and exclusively. In Germany, all exposure notifications are routed exclusively to the CWA. The high German standards for data protection apply. Risk assessment in Germany is carried out exclusively according to the epidemiological guidelines of the Robert Koch Institute (RKI). Users receive personal support from the hotlines if required.",
+                            "According to current knowledge, the own app instead of the standard solution ENE offers countries the following advantages:",
+                            "<ul><li>Flexible verification process</li><li>Integrated laboratory connection, faster notification process</li><li>Data protection conformity</li><li>Legal conformity, e.g. age rating</li><li>EU interoperability with legal certainty and data protection</li><li>Integration of hotlines</li><li>Backend servers still have to be operated</li><li>Parameterization (e.g. when an encounter is evaluated as a risk does not come from Google/Apple, but can be defined by each country)</li></ul>"
+                        ]
+                    },
+                    {
+                        "title": "When were the FAQ last updated?",
+                        "anchor": "update_faq",
+                        "active": true,
+                        "textblock": [
+                            "Updated [last-update]"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

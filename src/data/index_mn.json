@@ -181,6 +181,74 @@
             "text": "\"COVID-19 цар тахлыг бид дотооддоо алдлаа\" гэдэг мэдээг сонсоод, байдал цаашлаад хурцдаж, энэ бүх процесс дотор хамгийн томоохон тулгарч байгаа асуудлын нэг нь хавьталтыг илрүүлэх юм байна гэдэг зүйлийг ойлгоод Монгол Улсын иргэн хүний хувьд, мөн технологийн салбарын мэргэжилтний хүний хувьд энэ асуудалд сайн дураараа хувь нэмрээ оруулах боломжтой гэдгээ ойлгон нээлттэй эхийн төслүүдийг судлан, хөгжүүлэлтийн ажлаа эхлүүлсэн юм. Ингээд энэ хооронд эргэн тойрныхоо салбарын хүмүүсээс асуухад дуртайяа зөвшөөрөн тусалж эхний ээлжийн ажлыг хамт хийлцсэн юм. Үүнд: <ol><li><a href=\"https://www.linkedin.com/in/amarbayar/\">А. Амарбаяр (миний бие)</a></li><li><a href=\"https://www.linkedin.com/in/tuguldur-ulam-undrakh-829829b9/\">У. Төгөлдөр (React Native Mobile App)</a></li><li><a href=\"https://www.linkedin.com/in/shinebayar-g/\">Г. Шинэбаяр (Infrastructure)</a></li></ol>"
         }
     },
+    "section-screenshots": {
+        "id": "partners",
+        "headline": {
+            "title": "Our partners",
+            "text": "Early May 2020, the German government requested SAP and Deutsche Telekom subsidiary T-Systems to deliver the official Corona-Warn-App for Germany, based on open source and a decentralized approach. The following partners are supporting the development of the app together with the involvement of the global open source community."
+        },
+        "icon-list": [
+            {
+                "icon-url": "/assets/img/partner/bcg_logo.svg",
+                "title": "Boston Consulting Group"
+            },
+            {
+                "icon-url": "/assets/img/partner/bcgdv_logo.svg",
+                "title": "BCG Digital Ventures"
+            },
+            {
+                "icon-url": "/assets/img/partner/cispa_logo@1x.png",
+                "icon-set": "/assets/img/partner/cispa_logo@1x.png 1x, /assets/img/partner/cispa_logo@2x.png 2x",
+                "title": "Cispa"
+            },
+            {
+                "icon-url": "/assets/img/partner/detecon-logo@1x.png",
+                "icon-set": "/assets/img/partner/detecon-logo@1x.png 1x, /assets/img/partner/detecon-logo@2x.png 2x",
+                "title": "Detecon"
+            },
+            {
+                "icon-url": "/assets/img/partner/logo_edelman@1x.png",
+                "icon-set": "/assets/img/partner/logo_edelman@1x.png 1x, /assets/img/partner/logo_edelman@2x.png 2x",
+                "title": "Edelman"
+            },
+            {
+                "icon-url": "/assets/img/partner/fraunhofer_logo.svg",
+                "title": "Fraunhofer Institut"
+            },
+            {
+                "icon-url": "/assets/img/partner/HealthyTogehter_logo.svg",
+                "title": "Healthy Together"
+            },
+            {
+                "icon-url": "/assets/img/partner/Helmholtz_logo.svg",
+                "title": "Helmholtz"
+            },
+            {
+                "icon-url": "/assets/img/partner/logo_msg@1x.png",
+                "icon-set": "/assets/img/partner/logo_msg@1x.png 1x, /assets/img/partner/logo_msg@2x.png 2x",
+                "title": "msg systems ag"
+            },
+            {
+                "icon-url": "/assets/img/partner/rki-logo@1x.png",
+                "icon-set": "/assets/img/partner/rki-logo@1x.png 1x, /assets/img/partner/rki-logo@2x.png 2x",
+                "title": "Robert Koch Institut"
+            },
+            {
+                "icon-url": "/assets/img/partner/sap_logo@1x.png",
+                "icon-set": "/assets/img/partner/sap_logo@1x.png 1x, /assets/img/partner/sap_logo@2x.png 2x",
+                "title": "SAP"
+            },
+            {
+                "icon-url": "/assets/img/partner/T_Logo.svg",
+                "title": "Telecom"
+            },
+            {
+                "icon-url": "/assets/img/partner/TUViT_logo@1x.png",
+                "icon-set": "/assets/img/partner/TUViT_logo@1x.png 1x, /assets/img/partner/TUViT_logo@2x.png 2x",
+                "title": "TÜViT"
+            }
+        ]
+    },
     "section-join-project": {
         "headline": {
             "title": "Бидэнтэй нэгдээрэй!",

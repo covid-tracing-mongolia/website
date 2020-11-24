@@ -75,7 +75,7 @@ const getBlogEntries = (lang) => {
     .reverse()
     .map(folderName => {
       // figure out which language file to use - default is 'en', others added with _{lang} to filename
-      const fn = lang === "mn" ? 'index.md' : 'index_' + lang + '.md';
+      const fn = lang === "mn" ? 'index.md' : 'index.md';
       const fileContent = (() => {
         try {
           return readFileSync(path.join(blogMdPath(), folderName, fn)).toString();
