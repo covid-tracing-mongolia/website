@@ -166,6 +166,16 @@ section-cancelable=true}}
         {{/if}}
     </div>
 </section>
+<section class="section-screenshots">
+    <div class="container-fluid">
+        <div class="col col-10 offset-1">
+            <div class="text-center">
+                {{> headline-component title=screenshots.headline}}
+            </div>
+            {{> screenshots-section slides=screenshots.data }}
+        </div>
+    </div>
+</section>
 <section class="section-feature-listing section_bg-light" {{#if
     page-contents.section-feature-listing.id}}
     id="{{page-contents.section-feature-listing.id}}" {{/if}}>
