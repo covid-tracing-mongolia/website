@@ -1,0 +1,29 @@
+name: Build and Push to Container Registries
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  BRANCH: ${{ github.ref }}
+  DOCKERHUB_OWNER: covidmongolia
+  DOCKERHUB_REPO: website
+
+jobs:
+  build-n-push:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        run: |
+          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u $DOCKERHUB_OWNER --password-stdin
+
+      - name: Build & Push Website
+        run: |
+          docker build -t $DOCKERHUB_OWNER/$DOCKERHUB_REPO:$GITHUB_SHA -t $DOCKERHUB_OWNER/$DOCKERHUB_REPO:latest .
+          docker push $DOCKERHUB_OWNER/$DOCKERHUB_REPO:$GITHUB_SHA
+          docker push $DOCKERHUB_OWNER/$DOCKERHUB_REPO:latest
