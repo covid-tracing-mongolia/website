@@ -116,3 +116,5 @@ public
 # cypress
 cypress/screenshots/
 cypress/videos/
+
+.DS_Store
